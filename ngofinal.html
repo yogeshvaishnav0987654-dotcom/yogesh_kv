@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Anshika Helping Hands Foundation | Mira-Bhayandar NGO</title>
+<meta name="description" content="Anshika Helping Hands Foundation - Helping poor children, families with education, food, healthcare, and environment." />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<style>
+  :root{
+    --primary:#e63946;--primary-dark:#b71c2a;--dark:#1d3557;
+    --light:#f1faee;--accent:#f4a261;--green:#2a9d8f;
+    --eco:#16a34a;--eco-dark:#065f46;--text:#222;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,sans-serif;}
+  body{color:var(--text);line-height:1.6;background:#fff;overflow-x:hidden;}
+  html{scroll-behavior:smooth;}
+
+  /* HEADER */
+  header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08);}
+  nav{max-width:1250px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:15px 20px;}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none;cursor:pointer;}
+  .logo-icon{width:45px;height:45px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.3rem;overflow:hidden;border:2px solid #fff;box-shadow:0 3px 10px rgba(230,57,70,.25);}
+  .logo-icon img{width:100%;height:100%;object-fit:cover;border-radius:50%;}
+  .brand-name{display:flex;flex-direction:column;line-height:1.1;}
+  .brand-main{font-weight:800;font-size:1.05rem;color:var(--dark);letter-spacing:-.3px;}
+  .brand-sub{font-weight:600;font-size:.65rem;color:var(--primary);letter-spacing:2px;text-transform:uppercase;margin-top:2px;}
+  nav ul{display:flex;list-style:none;gap:14px;align-items:center;}
+  nav a{text-decoration:none;color:var(--dark);font-weight:500;transition:.3s;font-size:.88rem;cursor:pointer;white-space:nowrap;}
+  nav a:hover,nav a.active{color:var(--primary);}
+  nav a.active{font-weight:700;}
+  .donate-btn-nav{background:var(--primary);color:#fff !important;padding:10px 20px;border-radius:25px;font-weight:600;}
+  .donate-btn-nav:hover{background:var(--primary-dark);}
+  .menu-toggle{display:none;font-size:1.6rem;background:none;border:none;cursor:pointer;color:var(--dark);}
+
+  /* PAGES */
+  .page{display:none;}
+  .page.active{display:block;animation:pageFade .5s ease;}
+  @keyframes pageFade{from{opacity:0;transform:translateY(15px);}to{opacity:1;transform:translateY(0);}}
+
+  /* HERO */
+  .hero{background:linear-gradient(135deg,rgba(29,53,87,.85),rgba(230,57,70,.75)),url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=80') center/cover;color:#fff;text-align:center;padding:100px 20px;}
+  .hero h1{font-size:2.8rem;margin-bottom:15px;line-height:1.2;}
+  .hero p{font-size:1.2rem;max-width:700px;margin:0 auto 30px;opacity:.95;}
+  .hero-badge{display:inline-block;background:rgba(255,255,255,.2);padding:8px 18px;border-radius:20px;margin-bottom:20px;font-size:.9rem;backdrop-filter:blur(6px);}
+  .cta-buttons{display:flex;gap:15px;justify-content:center;flex-wrap:wrap;}
+  .btn{display:inline-block;padding:14px 32px;border-radius:30px;font-weight:600;text-decoration:none;cursor:pointer;border:none;font-size:1rem;transition:.3s;font-family:inherit;}
+  .btn-primary{background:var(--primary);color:#fff;}
+  .btn-primary:hover{background:var(--primary-dark);transform:translateY(-2px);box-shadow:0 10px 25px rgba(230,57,70,.3);}
+  .btn-outline{background:transparent;color:#fff;border:2px solid #fff;}
+  .btn-outline:hover{background:#fff;color:var(--dark);}
+  .btn-green{background:var(--eco);color:#fff;}
+  .btn-green:hover{background:var(--eco-dark);}
+
+  /* PAGE HERO */
+  .page-hero{background:linear-gradient(135deg,rgba(29,53,87,.88),rgba(42,157,143,.75)),url('https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=1600&q=80') center/cover;color:#fff;text-align:center;padding:90px 20px;}
+  .page-hero.food-hero{background:linear-gradient(135deg,rgba(29,53,87,.85),rgba(230,57,70,.75)),url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=80') center/cover;}
+  .page-hero.health-hero{background:linear-gradient(135deg,rgba(42,157,143,.88),rgba(29,53,87,.8)),url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1600&q=80') center/cover;}
+  .page-hero.env-hero{background:linear-gradient(135deg,rgba(22,163,74,.88),rgba(6,95,70,.8)),url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=80') center/cover;}
+  .page-hero h1{font-size:2.6rem;margin-bottom:15px;animation:fadeUp .8s ease;}
+  .page-hero p{font-size:1.15rem;max-width:700px;margin:0 auto;opacity:.95;}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+
+  /* SECTIONS */
+  section{padding:70px 20px;}
+  .container{max-width:1100px;margin:auto;}
+  .container-wide{max-width:1200px;margin:auto;}
+  .section-title{text-align:center;font-size:2rem;color:var(--dark);margin-bottom:15px;}
+  .section-sub{text-align:center;color:#666;max-width:680px;margin:0 auto 45px;}
+  .reveal{opacity:0;transform:translateY(40px);transition:all .8s cubic-bezier(.2,.8,.2,1);}
+  .reveal.visible{opacity:1;transform:translateY(0);}
+
+  /* IMPACT CARDS */
+  .impact{background:var(--light);}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:25px;}
+  .card{background:#fff;padding:30px;border-radius:15px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,.06);transition:.3s;}
+  .card:hover{transform:translateY(-6px);box-shadow:0 10px 25px rgba(0,0,0,.12);}
+  .card .icon{font-size:2.5rem;margin-bottom:15px;}
+  .card h4{color:var(--dark);margin-bottom:10px;}
+  .card p{color:#666;font-size:.95rem;}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+  .about-grid img{width:100%;border-radius:15px;box-shadow:0 8px 25px rgba(0,0,0,.15);}
+  .about-text h3{color:var(--primary);margin-bottom:15px;font-size:1.4rem;}
+  .about-text p{margin-bottom:15px;color:#444;}
+  .stat-row{display:flex;gap:20px;margin-top:25px;flex-wrap:wrap;}
+  .stat{background:var(--light);padding:18px 22px;border-radius:12px;flex:1;min-width:120px;text-align:center;}
+  .stat b{display:block;font-size:1.6rem;color:var(--primary);}
+  .stat span{font-size:.85rem;color:#555;}
+
+  /* STATS */
+  .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:25px;}
+  .stat-box{background:#fff;padding:30px 20px;border-radius:16px;text-align:center;box-shadow:0 5px 20px rgba(0,0,0,.06);transition:.4s;}
+  .stat-box:hover{transform:translateY(-8px);box-shadow:0 12px 30px rgba(230,57,70,.15);}
+  .stat-box .num{font-size:2.2rem;font-weight:800;color:var(--primary);display:block;margin-bottom:8px;}
+  .stat-box .label{color:#555;font-size:.95rem;font-weight:500;}
+
+  /* PROGRAM CARDS */
+  .program-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;}
+  .program-card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.08);transition:.4s;display:flex;flex-direction:column;}
+  .program-card:hover{transform:translateY(-10px);box-shadow:0 18px 40px rgba(0,0,0,.15);}
+  .program-card img{width:100%;height:200px;object-fit:cover;transition:.6s;}
+  .program-card:hover img{transform:scale(1.08);}
+  .program-body{padding:25px;flex:1;display:flex;flex-direction:column;}
+  .program-body h3{color:var(--dark);margin-bottom:10px;font-size:1.2rem;}
+  .program-body p{color:#666;font-size:.95rem;flex:1;margin-bottom:15px;}
+  .program-tag{display:inline-block;background:var(--light);color:var(--green);font-size:.75rem;font-weight:700;padding:5px 12px;border-radius:20px;margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px;}
+
+  /* QUOTE STRIP */
+  .quote-strip{background:linear-gradient(90deg,var(--primary),var(--accent));color:#fff;padding:35px 20px;text-align:center;}
+  .quote-strip p{font-size:1.4rem;font-weight:600;font-style:italic;max-width:900px;margin:0 auto;line-height:1.4;}
+  .quote-strip span{display:block;margin-top:12px;font-size:.9rem;opacity:.9;font-style:normal;}
+
+  /* GALLERY */
+  .gallery-section{background:#fafafa;}
+  .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;grid-auto-rows:220px;}
+  .photo{position:relative;overflow:hidden;border-radius:15px;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,.08);transition:.4s;}
+  .photo.tall{grid-row:span 2;}
+  .photo.wide{grid-column:span 2;}
+  .photo img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.8,.2,1);}
+  .photo:hover img{transform:scale(1.1);}
+  .photo::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.7) 0%,transparent 55%);opacity:0;transition:.4s;}
+  .photo:hover::after{opacity:1;}
+  .photo .caption{position:absolute;bottom:0;left:0;right:0;padding:20px;color:#fff;transform:translateY(20px);opacity:0;transition:.4s;z-index:2;}
+  .photo:hover .caption{transform:translateY(0);opacity:1;}
+  .photo .caption h4{font-size:1.05rem;margin-bottom:4px;}
+  .photo .caption p{font-size:.85rem;opacity:.9;}
+
+  /* MOTIVATION */
+  .motivation-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;}
+  .motivation-card{background:linear-gradient(135deg,#fff,#f9f9f9);border-radius:20px;padding:35px 28px;border-left:5px solid var(--primary);box-shadow:0 6px 20px rgba(0,0,0,.06);transition:.4s;}
+  .motivation-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(230,57,70,.15);}
+  .motivation-card .q-icon{font-size:2rem;color:var(--primary);opacity:.3;margin-bottom:10px;font-family:Georgia,serif;line-height:1;}
+  .motivation-card p{font-size:1.05rem;font-style:italic;color:#333;margin-bottom:15px;line-height:1.6;}
+  .motivation-card .author{font-size:.85rem;color:var(--primary);font-weight:700;font-style:normal;}
+
+  /* HELP CTA */
+  .help-cta{background:linear-gradient(135deg,var(--dark),#2a4a7f);color:#fff;text-align:center;padding:80px 20px;position:relative;overflow:hidden;}
+  .help-cta::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(230,57,70,.3),transparent 70%);border-radius:50%;}
+  .help-cta h2{font-size:2.2rem;margin-bottom:20px;position:relative;z-index:2;}
+  .help-cta p{max-width:650px;margin:0 auto 35px;opacity:.95;font-size:1.1rem;position:relative;z-index:2;}
+  .help-buttons{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;position:relative;z-index:2;}
+
+  /* REVIEWS */
+  .reviews{background:#fff;}
+  .review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;}
+  .review{background:var(--light);padding:25px;border-radius:15px;border-left:4px solid var(--primary);}
+  .review .stars{color:#f4a261;margin-bottom:10px;}
+  .review p{font-style:italic;color:#444;margin-bottom:15px;}
+  .review .author{font-weight:700;color:var(--dark);}
+  .review .role{font-size:.85rem;color:#777;}
+
+  /* CONTACT */
+  .contact{background:var(--light);}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+  .contact-info h3{color:var(--dark);margin-bottom:20px;}
+  .contact-item{display:flex;gap:15px;margin-bottom:20px;align-items:flex-start;}
+  .contact-item .ci-icon{background:var(--primary);color:#fff;width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem;}
+  .contact-item b{display:block;color:var(--dark);}
+  .contact-item a{color:var(--primary);text-decoration:none;}
+  .map-box{border-radius:15px;overflow:hidden;box-shadow:0 8px 25px rgba(0,0,0,.1);}
+  .map-box iframe{width:100%;height:100%;min-height:350px;border:0;}
+
+  /* HEALTH */
+  .med-icons{display:flex;justify-content:center;gap:25px;flex-wrap:wrap;margin:30px 0;font-size:3rem;}
+  .med-icons span{display:inline-block;animation:bounce 2s infinite ease-in-out;filter:drop-shadow(0 8px 15px rgba(0,0,0,.3));}
+  .med-icons span:nth-child(2){animation-delay:.2s;}
+  .med-icons span:nth-child(3){animation-delay:.4s;}
+  .med-icons span:nth-child(4){animation-delay:.6s;}
+  .med-icons span:nth-child(5){animation-delay:.8s;}
+  @keyframes bounce{0%,100%{transform:translateY(0) rotate(0);}50%{transform:translateY(-15px) rotate(10deg);}}
+
+  .medicine-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px;max-width:1000px;margin:auto;}
+  .medicine-card{background:#fff;border-radius:18px;padding:28px 22px;text-align:center;box-shadow:0 6px 20px rgba(0,0,0,.07);transition:.4s;border-top:4px solid var(--green);}
+  .medicine-card:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 20px 40px rgba(42,157,143,.2);}
+  .medicine-card .med-icon{font-size:3rem;margin-bottom:15px;display:block;animation:pulse 2.5s infinite;}
+  @keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.15);}}
+  .medicine-card h4{color:var(--dark);margin-bottom:8px;font-size:1.05rem;}
+  .medicine-card p{color:#666;font-size:.9rem;}
+
+  .fun-stats{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;padding:40px 20px;background:linear-gradient(135deg,#e0f7f4,#f0fdf9);}
+  .fun-bubble{width:140px;height:140px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fff;box-shadow:0 10px 30px rgba(42,157,143,.15);transition:.4s;}
+  .fun-bubble:hover{transform:scale(1.1) rotate(-5deg);box-shadow:0 15px 40px rgba(42,157,143,.3);}
+  .fun-bubble .emoji{font-size:1.8rem;margin-bottom:5px;animation:bounce 2s infinite;}
+  .fun-bubble .num{font-size:1.6rem;font-weight:800;color:var(--green);}
+  .fun-bubble .lbl{font-size:.75rem;color:#666;font-weight:600;text-align:center;padding:0 10px;}
+
+  .health-quote{background:linear-gradient(135deg,#2a9d8f,#264653);color:#fff;text-align:center;padding:50px 20px;}
+  .health-quote p{font-size:1.4rem;font-style:italic;font-weight:500;max-width:850px;margin:0 auto;line-height:1.5;}
+  .health-quote span{display:block;margin-top:15px;opacity:.85;font-size:.95rem;}
+
+  /* ENVIRONMENT */
+  .nature-icons{display:flex;justify-content:center;gap:25px;flex-wrap:wrap;margin:30px 0;font-size:3rem;}
+  .nature-icons span{display:inline-block;animation:sway 3s infinite ease-in-out;filter:drop-shadow(0 8px 15px rgba(0,0,0,.3));}
+  .nature-icons span:nth-child(2){animation-delay:.3s;}
+  .nature-icons span:nth-child(3){animation-delay:.6s;}
+  .nature-icons span:nth-child(4){animation-delay:.9s;}
+  .nature-icons span:nth-child(5){animation-delay:1.2s;}
+  @keyframes sway{0%,100%{transform:translateY(0) rotate(-5deg);}50%{transform:translateY(-15px) rotate(5deg);}}
+
+  .eco-stats{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;padding:50px 20px;background:linear-gradient(135deg,#e8f5e9,#f1f8e9);}
+  .eco-bubble{width:150px;height:150px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fff;box-shadow:0 10px 30px rgba(34,139,34,.18);transition:.4s;border:3px solid transparent;}
+  .eco-bubble:hover{transform:scale(1.1) rotate(-3deg);box-shadow:0 15px 40px rgba(34,139,34,.35);border-color:var(--eco);}
+  .eco-bubble .emoji{font-size:2rem;margin-bottom:6px;animation:sway 3s infinite;}
+  .eco-bubble .num{font-size:1.7rem;font-weight:800;color:var(--eco);}
+  .eco-bubble .lbl{font-size:.75rem;color:#555;font-weight:600;text-align:center;padding:0 10px;line-height:1.2;}
+
+  .eco-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:25px;max-width:1050px;margin:auto;}
+  .eco-card{background:#fff;border-radius:18px;padding:30px 24px;text-align:center;box-shadow:0 6px 20px rgba(0,0,0,.07);transition:.4s;border-bottom:4px solid transparent;}
+  .eco-card:hover{transform:translateY(-10px);border-bottom-color:var(--eco);box-shadow:0 20px 45px rgba(34,139,34,.2);}
+  .eco-card .eco-icon{font-size:3rem;margin-bottom:15px;display:block;animation:sway 3.5s infinite ease-in-out;}
+  .eco-card h4{color:var(--eco-dark);margin-bottom:10px;font-size:1.1rem;}
+  .eco-card p{color:#666;font-size:.92rem;}
+
+  .eco-quote{background:linear-gradient(135deg,var(--eco),var(--eco-dark));color:#fff;text-align:center;padding:50px 20px;position:relative;overflow:hidden;}
+  .eco-quote::before{content:'🌿';position:absolute;top:10px;left:20px;font-size:5rem;opacity:.1;}
+  .eco-quote::after{content:'🌍';position:absolute;bottom:10px;right:20px;font-size:5rem;opacity:.1;}
+  .eco-quote p{font-size:1.4rem;font-style:italic;font-weight:500;max-width:850px;margin:0 auto;line-height:1.5;position:relative;z-index:2;}
+  .eco-quote span{display:block;margin-top:15px;opacity:.9;font-size:.95rem;position:relative;z-index:2;}
+
+  /* PAYMENT */
+  .pay-wrapper{background:linear-gradient(135deg,#1d3557,#2a4a7f);padding:60px 20px;min-height:100vh;}
+  .pay-card{max-width:850px;margin:auto;background:#fff;border-radius:25px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.4);animation:cardIn .8s cubic-bezier(.2,.8,.2,1);}
+  @keyframes cardIn{from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);}}
+  .pay-header{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;padding:35px 25px;text-align:center;}
+  .pay-header h2{font-size:1.8rem;margin-bottom:8px;}
+  .pay-header p{font-size:.95rem;opacity:.95;}
+  .pay-body{padding:35px 30px;}
+  .amount-label{font-weight:700;color:var(--dark);margin-bottom:15px;font-size:1.05rem;}
+  .pay-amount-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:12px;margin-bottom:20px;}
+  .pay-amount-btn{background:#f5f5f5;border:2px solid #e0e0e0;color:var(--dark);padding:16px 10px;border-radius:12px;font-size:1rem;font-weight:700;cursor:pointer;transition:.3s;font-family:inherit;}
+  .pay-amount-btn:hover{background:#fff;border-color:var(--primary);transform:translateY(-3px);}
+  .pay-amount-btn.active{background:var(--primary);border-color:var(--primary);color:#fff;}
+  .pay-custom{margin-bottom:25px;}
+  .pay-custom label{font-size:.9rem;color:#666;margin-bottom:8px;font-weight:500;display:block;}
+  .pay-custom input{width:100%;padding:16px 20px;border-radius:12px;border:2px solid #e0e0e0;font-size:1rem;font-family:inherit;transition:.3s;}
+  .pay-custom input:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 4px rgba(230,57,70,.1);}
+  .pay-impact{background:linear-gradient(135deg,#f1faee,#e8f5e9);border-left:4px solid var(--green);border-radius:12px;padding:16px 20px;margin-bottom:25px;display:flex;align-items:center;gap:12px;}
+  .pay-impact .emoji{font-size:1.8rem;}
+  .pay-impact .text{font-size:.92rem;color:#333;font-weight:500;}
+  .pay-impact .text b{color:var(--green);}
+  .pay-btn-main{width:100%;background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;padding:18px;border-radius:12px;font-size:1.1rem;font-weight:700;border:none;cursor:pointer;transition:.3s;font-family:inherit;box-shadow:0 10px 30px rgba(230,57,70,.3);}
+  .pay-btn-main:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(230,57,70,.4);}
+  .pay-divider{display:flex;align-items:center;gap:15px;margin:30px 0 20px;color:#999;font-size:.82rem;text-transform:uppercase;letter-spacing:1px;font-weight:600;}
+  .pay-divider::before,.pay-divider::after{content:'';flex:1;height:1px;background:#e0e0e0;}
+  .qr-section{background:linear-gradient(135deg,#f8f9fa,#eef2f5);border:2px dashed #cbd5e0;border-radius:18px;padding:25px 20px;text-align:center;}
+  .qr-section h3{color:var(--dark);margin-bottom:8px;font-size:1.1rem;}
+  .qr-section .qr-desc{color:#666;font-size:.88rem;margin-bottom:18px;}
+  .qr-box{background:#fff;padding:12px;border-radius:15px;display:inline-block;margin-bottom:15px;box-shadow:0 10px 30px rgba(0,0,0,.1);}
+  .qr-box img{display:block;width:200px;height:200px;}
+  .upi-row{background:#fff;display:inline-flex;align-items:center;gap:10px;padding:10px 18px;border-radius:25px;box-shadow:0 4px 15px rgba(0,0,0,.08);margin-bottom:10px;flex-wrap:wrap;justify-content:center;}
+  .upi-row .lbl{font-size:.72rem;color:#888;font-weight:600;text-transform:uppercase;}
+  .upi-row .val{font-weight:700;color:var(--dark);font-size:.92rem;}
+  .upi-row .cpy{background:var(--primary);color:#fff;border:none;padding:6px 14px;border-radius:15px;font-size:.72rem;font-weight:600;cursor:pointer;transition:.3s;font-family:inherit;}
+  .upi-row .cpy:hover{background:var(--primary-dark);}
+  .trust-badges{display:flex;justify-content:center;gap:25px;flex-wrap:wrap;margin-top:30px;padding-top:20px;border-top:1px solid #eee;}
+  .trust-item{display:flex;flex-direction:column;align-items:center;gap:6px;color:#666;font-size:.78rem;font-weight:600;}
+  .trust-item .trust-icon{width:45px;height:45px;background:var(--light);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:var(--green);}
+
+  /* DONOR FORM */
+  .donor-section{background:linear-gradient(135deg,#f8f9fa,#eef2f5);border-radius:18px;padding:25px;margin-bottom:30px;border-left:4px solid var(--primary);}
+  .donor-section h3{color:var(--dark);margin-bottom:18px;font-size:1.1rem;display:flex;align-items:center;gap:8px;}
+  .donor-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;}
+  .donor-field{position:relative;}
+  .donor-field label{display:block;font-size:.82rem;color:#555;font-weight:600;margin-bottom:6px;}
+  .donor-field label .req{color:var(--primary);}
+  .donor-field input,.donor-field textarea{width:100%;padding:13px 16px;border-radius:10px;border:2px solid #e0e0e0;font-size:.92rem;font-family:inherit;transition:.3s;background:#fff;}
+  .donor-field input:focus,.donor-field textarea:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 4px rgba(230,57,70,.1);}
+  .donor-field.full{grid-column:1 / -1;}
+
+  /* BANK DETAILS */
+  .bank-section{margin-top:30px;padding:25px;background:linear-gradient(135deg,#fffbeb,#fef3c7);border-radius:18px;border-left:4px solid var(--accent);}
+  .bank-section h3{color:var(--dark);margin-bottom:18px;font-size:1.1rem;display:flex;align-items:center;gap:8px;}
+  .bank-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;}
+  .bank-item{background:#fff;padding:15px 18px;border-radius:12px;box-shadow:0 3px 10px rgba(0,0,0,.05);}
+  .bank-item .bank-label{font-size:.72rem;color:#888;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;}
+  .bank-item .bank-value{color:var(--dark);font-weight:700;font-size:.95rem;word-break:break-all;}
+  .bank-item .bank-copy{background:var(--accent);color:#fff;border:none;padding:4px 10px;border-radius:12px;font-size:.7rem;font-weight:600;cursor:pointer;margin-top:8px;font-family:inherit;transition:.3s;}
+  .bank-item .bank-copy:hover{background:#d97706;}
+
+  /* VOLUNTEER */
+  .vol-hero{background:linear-gradient(135deg,rgba(42,157,143,.9),rgba(29,53,87,.85)),url('https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1600&q=80') center/cover;color:#fff;text-align:center;padding:100px 20px;position:relative;overflow:hidden;}
+  .vol-icons{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:25px 0;font-size:2.8rem;}
+  .vol-icons span{display:inline-block;animation:floatUp 3s infinite ease-in-out;filter:drop-shadow(0 8px 15px rgba(0,0,0,.3));}
+  .vol-icons span:nth-child(2){animation-delay:.3s;}
+  .vol-icons span:nth-child(3){animation-delay:.6s;}
+  .vol-icons span:nth-child(4){animation-delay:.9s;}
+  @keyframes floatUp{0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(-20px) scale(1.1);}}
+
+  .volunteer-form-section{background:linear-gradient(135deg,#f0fdf4,#dcfce7);padding:70px 20px;}
+  .vol-form-card{max-width:700px;margin:auto;background:#fff;border-radius:25px;padding:45px 40px;box-shadow:0 20px 60px rgba(42,157,143,.2);position:relative;overflow:hidden;}
+  .vol-form-card::before{content:'';position:absolute;top:-80px;right:-80px;width:200px;height:200px;background:radial-gradient(circle,rgba(42,157,143,.15),transparent 70%);border-radius:50%;}
+  .vol-form-card h2{color:var(--dark);text-align:center;margin-bottom:10px;font-size:1.8rem;position:relative;z-index:2;}
+  .vol-form-card .sub{text-align:center;color:#666;margin-bottom:35px;font-size:.95rem;position:relative;z-index:2;}
+  .form-group{margin-bottom:22px;position:relative;z-index:2;}
+  .form-group label{display:block;font-weight:600;color:var(--dark);margin-bottom:8px;font-size:.92rem;}
+  .form-group label .req{color:var(--primary);}
+  .form-group input,.form-group select,.form-group textarea{width:100%;padding:14px 18px;border:2px solid #e0e0e0;border-radius:12px;font-size:.95rem;font-family:inherit;transition:.3s;background:#fff;}
+  .form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 4px rgba(42,157,143,.1);}
+  .form-group textarea{resize:vertical;min-height:100px;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .interest-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .interest-option{background:#f8f9fa;border:2px solid #e0e0e0;border-radius:12px;padding:14px;cursor:pointer;transition:.3s;display:flex;align-items:center;gap:10px;font-size:.9rem;font-weight:500;}
+  .interest-option:hover{background:#fff;border-color:var(--green);transform:translateY(-2px);}
+  .interest-option input{width:auto;margin:0;}
+  .interest-option.selected{background:linear-gradient(135deg,#dcfce7,#bbf7d0);border-color:var(--green);color:var(--eco-dark);font-weight:600;}
+  .vol-submit{width:100%;background:linear-gradient(135deg,var(--green),#1f7a6e);color:#fff;padding:18px;border-radius:12px;font-size:1.05rem;font-weight:700;border:none;cursor:pointer;transition:.3s;font-family:inherit;margin-top:15px;box-shadow:0 10px 30px rgba(42,157,143,.3);}
+  .vol-submit:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(42,157,143,.4);}
+
+  .vol-success{display:none;text-align:center;padding:20px;}
+  .vol-success.show{display:block;animation:popIn .5s cubic-bezier(.2,.8,.2,1);}
+  @keyframes popIn{from{transform:scale(.8);opacity:0;}to{transform:scale(1);opacity:1;}}
+  .vol-success .success-icon{width:100px;height:100px;background:linear-gradient(135deg,#22c55e,#16a34a);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 25px;font-size:3.5rem;color:#fff;animation:pulseIcon 1.5s infinite;box-shadow:0 15px 40px rgba(34,197,94,.4);}
+  @keyframes pulseIcon{0%,100%{transform:scale(1);}50%{transform:scale(1.08);}}
+  .vol-success h2{color:var(--eco);margin-bottom:15px;font-size:1.8rem;}
+  .vol-success p{color:#555;margin-bottom:20px;line-height:1.6;}
+  .vol-success .vol-id-box{background:linear-gradient(135deg,#f0fdf4,#dcfce7);padding:20px;border-radius:15px;margin-bottom:20px;border:2px dashed var(--eco);}
+  .vol-success .vol-id-box .lbl{font-size:.75rem;color:#666;text-transform:uppercase;letter-spacing:1px;font-weight:600;}
+  .vol-success .vol-id-box .id{font-size:1.3rem;font-weight:800;color:var(--eco-dark);letter-spacing:1px;margin-top:5px;}
+  .vol-success .info-text{background:#fffbeb;padding:14px;border-radius:10px;border-left:3px solid var(--accent);font-size:.88rem;color:#666;text-align:left;margin-bottom:20px;}
+  .vol-success .vol-buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+  .vol-success .vol-buttons button{padding:12px 28px;border-radius:25px;font-weight:600;cursor:pointer;border:none;font-family:inherit;transition:.3s;font-size:.92rem;}
+  .vol-success .btn-print{background:var(--primary);color:#fff;}
+  .vol-success .btn-print:hover{background:var(--primary-dark);transform:translateY(-2px);}
+  .vol-success .btn-another{background:#f0f0f0;color:var(--dark);}
+  .vol-success .btn-another:hover{background:#e0e0e0;}
+
+  /* WHY VOLUNTEER */
+  .why-vol{background:#fff;}
+  .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:25px;}
+  .why-card{background:linear-gradient(135deg,#f0fdf4,#fff);border-radius:18px;padding:30px 25px;text-align:center;box-shadow:0 6px 20px rgba(0,0,0,.06);transition:.4s;border-top:4px solid var(--green);}
+  .why-card:hover{transform:translateY(-10px);box-shadow:0 20px 45px rgba(42,157,143,.2);}
+  .why-card .why-icon{font-size:3rem;margin-bottom:15px;display:block;animation:floatUp 3s infinite;}
+  .why-card h4{color:var(--dark);margin-bottom:10px;}
+  .why-card p{color:#666;font-size:.9rem;}
+
+  /* TOAST */
+  .toast{position:fixed;top:25px;right:25px;background:#1d3557;color:#fff;padding:15px 22px;border-radius:12px;font-size:.9rem;font-weight:500;box-shadow:0 10px 30px rgba(0,0,0,.3);z-index:99998;transform:translateX(400px);transition:transform .4s cubic-bezier(.2,.8,.2,1);max-width:340px;}
+  .toast.show{transform:translateX(0);}
+  .toast.success{background:linear-gradient(135deg,#16a34a,#15803d);}
+  .toast.error{background:linear-gradient(135deg,#dc2626,#991b1b);}
+
+  /* MODAL */
+  .success-modal{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:99999;display:none;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(5px);}
+  .success-modal.open{display:flex;animation:fadeIn .3s ease;}
+  @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+  .success-content{background:#fff;border-radius:25px;padding:45px 35px;max-width:480px;width:100%;text-align:center;animation:popIn2 .5s cubic-bezier(.2,.8,.2,1);box-shadow:0 25px 70px rgba(0,0,0,.4);}
+  @keyframes popIn2{from{transform:scale(.7);opacity:0;}to{transform:scale(1);opacity:1;}}
+  .success-content .s-icon{width:90px;height:90px;background:linear-gradient(135deg,#22c55e,#16a34a);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 25px;font-size:3rem;color:#fff;animation:pulseIcon 1.5s infinite;}
+  .success-content h2{color:#16a34a;margin-bottom:15px;font-size:1.8rem;}
+  .success-content .msg{color:#555;margin-bottom:25px;font-size:1.05rem;line-height:1.6;}
+  .success-content .details{background:linear-gradient(135deg,#f0fdf4,#dcfce7);padding:22px;border-radius:15px;margin-bottom:25px;text-align:left;border:1px solid #bbf7d0;}
+  .success-content .det-row{display:flex;justify-content:space-between;margin-bottom:12px;padding-bottom:12px;border-bottom:1px dashed #bbf7d0;}
+  .success-content .det-row:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
+  .success-content .det-row .lbl{color:#666;font-size:.9rem;}
+  .success-content .det-row .val{color:var(--dark);font-weight:700;font-size:.9rem;}
+  .success-content .det-row .val.amt{color:var(--primary);font-size:1.2rem;}
+  .success-content .det-row .val.ok{color:#16a34a;}
+  .success-content .note{color:#888;font-size:.85rem;margin-bottom:25px;background:#fffbeb;padding:12px;border-radius:10px;border-left:3px solid var(--accent);text-align:left;}
+  .success-content .close-btn{background:var(--primary);color:#fff;border:none;padding:14px 40px;border-radius:30px;font-size:1rem;font-weight:700;cursor:pointer;transition:.3s;font-family:inherit;}
+  .success-content .close-btn:hover{background:var(--primary-dark);transform:translateY(-2px);}
+
+  /* LIGHTBOX */
+  .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;}
+  .lightbox.open{display:flex;}
+  .lightbox img{max-width:90vw;max-height:85vh;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.5);animation:zoomIn .4s ease;}
+  @keyframes zoomIn{from{transform:scale(.85);opacity:0;}to{transform:scale(1);opacity:1;}}
+  .lightbox .close{position:absolute;top:25px;right:35px;color:#fff;font-size:2.5rem;cursor:pointer;background:none;border:none;line-height:1;transition:.3s;}
+  .lightbox .close:hover{transform:rotate(90deg);color:var(--primary);}
+
+  /* FOOTER */
+  footer{background:var(--dark);color:#cfd8e3;padding:40px 20px 20px;text-align:center;}
+  footer .footer-logo{font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:10px;}
+  footer p{font-size:.9rem;margin-bottom:8px;}
+  footer .footer-links{margin:20px 0;display:flex;gap:22px;justify-content:center;flex-wrap:wrap;}
+  footer .footer-links a{color:#cfd8e3;text-decoration:none;font-size:.9rem;cursor:pointer;transition:.3s;}
+  footer .footer-links a:hover{color:var(--accent);}
+  footer .copyright{border-top:1px solid rgba(255,255,255,.1);margin-top:20px;padding-top:20px;font-size:.85rem;opacity:.7;}
+
+  /* FOOTER SOCIALS */
+  .footer-socials{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin:25px 0 15px;}
+  .fs-icon{width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.3rem;text-decoration:none;transition:.4s;position:relative;overflow:hidden;}
+  .fs-icon:hover{transform:translateY(-6px) scale(1.1);box-shadow:0 15px 30px rgba(0,0,0,.3);}
+  .fs-instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);}
+  .fs-youtube{background:#ff0000;}
+  .fs-email{background:linear-gradient(135deg,#ea4335,#c5221f);}
+  .fs-facebook{background:#1877f2;}
+  .fs-whatsapp{background:#25d366;}
+
+  .footer-logo{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;}
+  .footer-logo img{width:45px;height:45px;border-radius:50%;object-fit:cover;}
+
+  /* TIMELINE */
+  .timeline-wrap{position:relative;max-width:800px;margin:auto;padding:20px 0;}
+  .timeline-wrap::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,var(--primary),var(--green));transform:translateX(-50%);border-radius:3px;}
+  .tl-item{position:relative;width:50%;padding:20px 40px;}
+  .tl-item:nth-child(odd){left:0;text-align:right;}
+  .tl-item:nth-child(even){left:50%;text-align:left;}
+  .tl-item .dot{position:absolute;top:30px;width:20px;height:20px;background:var(--primary);border-radius:50%;border:4px solid #fff;box-shadow:0 0 0 3px var(--primary);}
+  .tl-item:nth-child(odd) .dot{right:-10px;}
+  .tl-item:nth-child(even) .dot{left:-10px;}
+  .tl-item .tl-content{background:var(--light);padding:20px;border-radius:12px;display:inline-block;box-shadow:0 4px 15px rgba(0,0,0,.06);text-align:left;}
+  .tl-item h4{color:var(--primary);margin-bottom:6px;}
+  .tl-item p{font-size:.9rem;color:#555;}
+
+  /* SPONSOR */
+  .sponsor{background:linear-gradient(135deg,var(--dark),#2a4a7f);color:#fff;text-align:center;}
+  .sponsor .section-title{color:#fff;}
+  .sponsor .section-sub{color:#dbe4f0;}
+  .sponsor-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:25px;max-width:1000px;margin:auto;}
+  .sponsor-card{background:rgba(255,255,255,.08);border:2px solid rgba(255,255,255,.15);border-radius:18px;padding:35px 25px;backdrop-filter:blur(10px);transition:.4s;cursor:pointer;}
+  .sponsor-card:hover{transform:translateY(-8px);background:rgba(255,255,255,.14);border-color:var(--primary);}
+  .sponsor-card .icon{font-size:2.5rem;margin-bottom:15px;}
+  .sponsor-card h4{font-size:1.1rem;margin-bottom:10px;}
+  .sponsor-card .price{font-size:1.8rem;font-weight:800;color:var(--accent);margin:10px 0;}
+  .sponsor-card p{font-size:.9rem;opacity:.9;}
+  .sponsor-card .select-btn{margin-top:18px;background:var(--primary);color:#fff;border:none;padding:12px 25px;border-radius:25px;font-weight:600;cursor:pointer;transition:.3s;width:100%;font-family:inherit;}
+  .sponsor-card .select-btn:hover{background:var(--primary-dark);}
+
+  /* RESPONSIVE */
+  @media(max-width:920px){nav ul{gap:10px;}nav a{font-size:.8rem;}.brand-main{font-size:.95rem;}}
+  @media(max-width:820px){
+    .about-grid,.contact-grid{grid-template-columns:1fr;}
+    .hero h1{font-size:2rem;}
+    .page-hero h1{font-size:1.8rem;}
+    nav ul{position:absolute;top:70px;left:0;right:0;background:#fff;flex-direction:column;padding:20px;gap:15px;box-shadow:0 5px 15px rgba(0,0,0,.1);display:none;z-index:999;}
+    nav ul.open{display:flex;}
+    .menu-toggle{display:block;}
+    nav a{font-size:1rem;}
+    .gallery{grid-auto-rows:180px;gap:12px;}
+    .photo.wide{grid-column:span 1;}
+    .photo.tall{grid-row:span 1;}
+    .timeline-wrap::before{left:20px;}
+    .tl-item{width:100%;left:0 !important;text-align:left !important;padding-left:55px;padding-right:20px;}
+    .tl-item .dot{left:10px !important;right:auto !important;}
+    .fun-bubble{width:120px;height:120px;}
+    .med-icons,.nature-icons{font-size:2.2rem;gap:15px;}
+    .eco-bubble{width:130px;height:130px;}
+    .form-row,.interest-grid{grid-template-columns:1fr;}
+    .vol-form-card{padding:30px 22px;}
+    .pay-body{padding:25px 20px;}
+    .pay-amount-grid{grid-template-columns:repeat(2,1fr);}
+    .qr-box img{width:180px;height:180px;}
+    .donor-grid{grid-template-columns:1fr;}
+    .toast{right:15px;left:15px;max-width:none;transform:translateY(-120%);}
+    .toast.show{transform:translateY(0);}
+    .fs-icon{width:42px;height:42px;font-size:1.1rem;}
+    .qr-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.qr-box img {
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <nav>
+    <a class="logo" onclick="showPage('home')">
+      <div class="logo-icon">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkj_XotcbrSHpfwhKok1M6ViVQrRRgrUwYzHjlFlHWXIm0JwQWD32dOIR6ICkSzfXflTnR_2c8Bm08CzE2hDhM37aH5IrJ9hjnnyrpX9_UydmrxGp-3LrM_BeaocKSuOUrtjEqqv_1JQeIT=w218-h218-n-k-no-nu" alt="Logo" onerror="this.parentElement.innerHTML='🤝'" />
+      </div>
+      <div class="brand-name">
+        <span class="brand-main" style="font-size: 1.5rem; font-weight: 700;">Anshika Helping Hands</span>
+        <span style="font-weight: 700; font-size: 1.5rem; color: #c63d3d;" class="brand-sub">Foundation</span>
+      </div>
+    </a>
+    <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+    <ul id="navLinks">
+      <li><a onclick="showPage('home')" data-page="home" class="active">Home</a></li>
+      <li><a onclick="showPage('education')" data-page="education">Education</a></li>
+      <li><a onclick="showPage('food')" data-page="food">Food</a></li>
+      <li><a onclick="showPage('health')" data-page="health">Health</a></li>
+      <li><a onclick="showPage('environment')" data-page="environment">Environment</a></li>
+      <li><a onclick="showPage('volunteer')" data-page="volunteer">Volunteer</a></li>
+      <li><a onclick="showPage('home','contact')">Contact</a></li>
+      <li><a onclick="showPage('payment')" class="donate-btn-nav">Donate</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ========== PAGE: HOME ========== -->
+<div id="page-home" class="page active">
+
+  <section class="hero">
+    <div class="hero-badge">⭐ 5.0 Google Rating · Mira-Bhayandar, Maharashtra</div>
+    <h1>Anshika Helping Hands Foundation</h1>
+    <p>A group of sincere, honest, and hardworking people dedicated to serving poor children and families in Mira-Bhayandar. Your small contribution can change a life.</p>
+    <div class="cta-buttons">
+      <a onclick="showPage('payment')" class="btn btn-primary">❤️ Donate Now</a>
+      <a onclick="showPage('education')" class="btn btn-outline">📚 Our Work</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">Who We Are</h2>
+      <p class="section-sub">A registered social services organization committed to uplifting underprivileged children and families in Bhayandar East.</p>
+      <div class="about-grid">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkSo8y9SjC5Hdlc-L4Lhwrb6sKiyGvcxTAqcSvCx3Tomio_sHskmLl_nYEt-h_jHDT4mh3AEQK2qj_KjQFhf65GE_Q4wUWlmilof7-jl8ji0PKNH03RZg5tWQz_EyT-D8UG5DhjUTWtEY15=s680-w680-h510-rw" alt="Volunteers" />
+        <div class="about-text">
+          <h3>Helping Hands, Changing Lives</h3>
+          <p>Anshika Helping Hands Foundation is a grassroots NGO based in Narmada Nagar, Bhayandar East. We focus on child welfare, education, food distribution, healthcare, and environment.</p>
+          <p>Our team of dedicated volunteers works tirelessly to provide food, education, and basic necessities to those who need it most.</p>
+          <div class="stat-row">
+            <div class="stat"><b>5.0★</b><span>Google Rating</span></div>
+            <div class="stat"><b>150+</b><span>Children Helped</span></div>
+            <div class="stat"><b>100%</b><span>Transparent</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="impact" id="impact">
+    <div class="container">
+      <h2 class="section-title">Our Work</h2>
+      <p class="section-sub">Every contribution creates a ripple of change in our community.</p>
+      <div class="cards">
+        <div class="card" onclick="showPage('education')" style="cursor:pointer;">
+          <div class="icon">📚</div><h4>Education Support</h4>
+          <p>School fees, books, uniforms, and free tuition for children.</p>
+          <p style="color:#e63946;font-weight:600;margin-top:12px;">Learn More →</p>
+        </div>
+        <div class="card" onclick="showPage('food')" style="cursor:pointer;">
+          <div class="icon">🍛</div><h4>Food Distribution</h4>
+          <p>Regular meal drives and ration kits for families in need.</p>
+          <p style="color:#e63946;font-weight:600;margin-top:12px;">See Photos →</p>
+        </div>
+        <div class="card" onclick="showPage('health')" style="cursor:pointer;">
+          <div class="icon">💊</div><h4>Health Care</h4>
+          <p>Free medicines, health camps, and medical support.</p>
+          <p style="color:#e63946;font-weight:600;margin-top:12px;">Learn More →</p>
+        </div>
+        <div class="card" onclick="showPage('environment')" style="cursor:pointer;">
+          <div class="icon">🌱</div><h4>Environment</h4>
+          <p>Tree plantation and clean-up drives for a better planet.</p>
+          <p style="color:#16a34a;font-weight:600;margin-top:12px;">Go Green →</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="help-cta">
+    <h2>Want To Make A Difference?</h2>
+    <p>Join our team of dedicated volunteers or donate to support our mission. Every small act of kindness counts.</p>
+    <div class="help-buttons">
+      <a onclick="showPage('payment')" class="btn btn-primary">❤️ Donate Now</a>
+      <a onclick="showPage('volunteer')" class="btn btn-green">🤝 Become a Volunteer</a>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <h2 class="section-title">What People Say</h2>
+      <p class="section-sub">Rated 5.0 on Google by our community.</p>
+      <div class="review-grid">
+        <div class="review"><div class="stars">★★★★★</div><p>"A group of sincere, honest, hardworking people."</p><div class="author">Jitendra Upadhyay</div><div class="role">Google Review</div></div>
+        <div class="review"><div class="stars">★★★★★</div><p>"Best service in poor children helping."</p><div class="author">New Patel Medical</div><div class="role">Google Review</div></div>
+        <div class="review"><div class="stars">★★★★★</div><p>"Best social services, child help — truly dedicated team."</p><div class="author">Savita Yadav</div><div class="role">Google Review</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="section-title">Visit or Contact Us</h2>
+      <p class="section-sub">We're open daily until 9:30 PM. Come meet our team!</p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <div class="contact-item"><div class="ci-icon">📍</div><div><b>Address</b>Shop No. 2, New Sagar Samrat, Opp. Blossoms School, Narmada Nagar, Bhayandar (East) <br>Thane – 401105, Maharashtra,<br> India
+
+Our main office location<br>Mira Bhayandar, Maharashtra 401105</div></div>
+          <div class="contact-item"><div class="ci-icon">📞</div><div><b>Phone</b><a href="tel:09920446089">099204 46089 / 8104955181</a></div></div>
+          <div class="contact-item"><div class="ci-icon">🕐</div><div><b>Hours</b>Open daily · Closes 9:30 PM</div></div>
+          <div class="contact-item"><div class="ci-icon">⭐</div><div><b>Google Rating</b>5.0 ★ · Social Services Organization</div></div>
+        </div>
+        <div class="map-box">
+          <iframe src="https://www.google.com/maps?q=Anshika+Helping+Hands+Foundation+Bhayandar+East&output=embed" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ========== PAGE: EDUCATION ========== -->
+<div id="page-education" class="page">
+  <section class="page-hero">
+    <h1>📚 Education For Every Child</h1>
+    <p>We believe every child deserves a chance to learn, grow, and dream. Our education program supports underprivileged children in Mira-Bhayandar.</p>
+  </section>
+
+  <section style="background:var(--light);">
+    <div class="container">
+      <h2 class="section-title reveal">Our Education Impact</h2>
+      <p class="section-sub reveal">Numbers that represent real children whose lives have changed.</p>
+      <div class="stats-grid">
+        <div class="stat-box reveal"><span class="num" data-count="150">0</span><span class="label">Children Supported</span></div>
+        <div class="stat-box reveal"><span class="num" data-count="45">0</span><span class="label">School Fees Paid</span></div>
+        <div class="stat-box reveal"><span class="num" data-count="500">0</span><span class="label">Books Distributed</span></div>
+        <div class="stat-box reveal"><span class="num" data-count="12">0</span><span class="label">Schools Partnered</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title reveal">What We Provide</h2>
+      <p class="section-sub reveal">Comprehensive support that removes every barrier.</p>
+      <div class="program-grid">
+        <div class="program-card reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkSo8y9SjC5Hdlc-L4Lhwrb6sKiyGvcxTAqcSvCx3Tomio_sHskmLl_nYEt-h_jHDT4mh3AEQK2qj_KjQFhf65GE_Q4wUWlmilof7-jl8ji0PKNH03RZg5tWQz_EyT-D8UG5DhjUTWtEY15=w243-h174-n-k-no-nu" alt="Fees" /><div class="program-body"><span class="program-tag">Financial Aid</span><h3>School Fee Assistance</h3><p>We pay school fees for children whose families cannot afford it.</p></div></div>
+        <div class="program-card reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnpnzNX9IHT-RZghrgMCvzQ9Q45l2cgOjYHgWZy8aQiJnq5GT4u0nqa546OnrlIyCZOAmex4Y4LyVoO66I2jRFZt5dMKXQM1AQzicifaEN-NlbNFyzf3a89FPyjh7H5Xo1DD28YoNho3Upj=w243-h174-n-k-no-nu" alt="Books" /><div class="program-body"><span class="program-tag">Study Material</span><h3>Books & Stationery</h3><p>Notebooks, textbooks, bags, and stationery kits for children.</p></div></div>
+        <div class="program-card reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnB7j2vDS4xJL8kELuW801H5D7yPGyGp4-wEV2_jE2DYI_iXfXq5kOYjzZI5Gm2PaLz8PWuHyhhxbdWrM9MrYllwx8e2Cc9w_X1Zrq8rRdTORAvcR7BBmH0zYyO2rGMnuhK1W8ZX-R4vJU=w243-h304-n-k-no-nu" alt="Tuition" /><div class="program-body"><span class="program-tag">Coaching</span><h3>Free Tuition Classes</h3><p>Volunteer teachers conduct free evening classes for children.</p></div></div>
+        <div class="program-card reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk7bC58A6Ppcl9Rm0Z77XXXbCgTewjCamR1k08RV8JMtm_OsKTBrbkC_KJbo1N5Hb87x0OnPEOxquDhHQBFrAvwa7kYJtPz1BCnj2b_-nIBqk1IrOVktqVEqJeufUgxNnFlQwMlEGPqQoJ-=w243-h406-n-k-no-nu" alt="Meals" /><div class="program-body"><span class="program-tag">Nutrition</span><h3>Mid-Day Meals</h3><p>A hungry child cannot learn. We provide nutritious meals.</p></div></div>
+        <div class="program-card reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkrk98Sl3VtqqM61tvD4cFwDckZCl-S66bLCCGGJV74eBnYdNeL5a7sr4IeqyQiZFoIYMb8eIjHuAkcuhlSboiEWEHo8L-YdNf46Q7Q1IysvgEpovUabqI7-iaJktUn-_3OizL0Vt3T5q6n=w243-h203-n-k-no-nu" alt="Computer" /><div class="program-body"><span class="program-tag">Digital Skills</span><h3>Computer Literacy</h3><p>Basic computer training for older children.</p></div></div>
+        <div class="program-card reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkj_XotcbrSHpfwhKok1M6ViVQrRRgrUwYzHjlFlHWXIm0JwQWD32dOIR6ICkSzfXflTnR_2c8Bm08CzE2hDhM37aH5IrJ9hjnnyrpX9_UydmrxGp-3LrM_BeaocKSuOUrtjEqqv_1JQeIT=w243-h244-n-k-no-nu" alt="Girl" /><div class="program-body"><span class="program-tag">Girl Child</span><h3>Beti Padhao</h3><p>Special focus on girls' education for equal opportunities.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-strip">
+    <p>"Education is the most powerful weapon which you can use to change the world."</p>
+    <span>— Nelson Mandela</span>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title reveal">How We Work</h2>
+      <p class="section-sub reveal">A simple, transparent process.</p>
+      <div class="timeline-wrap">
+        <div class="tl-item"><div class="dot"></div><div class="tl-content"><h4>1. Identify</h4><p>Volunteers identify children in need through schools.</p></div></div>
+        <div class="tl-item"><div class="dot"></div><div class="tl-content"><h4>2. Verify</h4><p>We verify each family's situation with home visits.</p></div></div>
+        <div class="tl-item"><div class="dot"></div><div class="tl-content"><h4>3. Support</h4><p>Fees, books, uniforms provided directly.</p></div></div>
+        <div class="tl-item"><div class="dot"></div><div class="tl-content"><h4>4. Follow-Up</h4><p>We track each child's progress regularly.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sponsor">
+    <div class="container">
+      <h2 class="section-title reveal">Sponsor A Child's Education</h2>
+      <p class="section-sub reveal">Choose how you want to make a difference.</p>
+      <div class="sponsor-grid">
+        <div class="sponsor-card reveal" onclick="sponsorNow(500)"><div class="icon">📖</div><h4>Books & Stationery</h4><div class="price">₹500</div><p>Full year's study material for one child.</p><button class="select-btn">Sponsor Now</button></div>
+        <div class="sponsor-card reveal" onclick="sponsorNow(1500)"><div class="icon">🎒</div><h4>School Kit</h4><div class="price">₹1,500</div><p>Bag, uniform, shoes, and stationery.</p><button class="select-btn">Sponsor Now</button></div>
+        <div class="sponsor-card reveal" onclick="sponsorNow(3000)"><div class="icon">📚</div><h4>Half-Year Tuition</h4><div class="price">₹3,000</div><p>Six months of free coaching support.</p><button class="select-btn">Sponsor Now</button></div>
+        <div class="sponsor-card reveal" onclick="sponsorNow(6000)"><div class="icon">🎓</div><h4>Full Year</h4><div class="price">₹6,000</div><p>Complete education for one whole year.</p><button class="select-btn">Sponsor Now</button></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ========== PAGE: FOOD ========== -->
+<div id="page-food" class="page">
+  <section class="page-hero food-hero">
+    <h1>🍛 Food Distribution Drive</h1>
+    <p>Every meal we serve is a life we touch. Every plate we share is a prayer we answer.</p>
+  </section>
+
+  <section class="quote-strip">
+    <p>"The best way to find yourself is to lose yourself in the service of others."</p>
+    <span>— Mahatma Gandhi</span>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title reveal">Our Food Distribution Impact</h2>
+      <p class="section-sub reveal">Real numbers. Real meals. Real smiles.</p>
+      <div class="stats-grid">
+        <div class="stat-box reveal"><span class="num" data-count="10000">0</span><span class="label">🍛 Meals Served</span></div>
+        <div class="stat-box reveal"><span class="num" data-count="500">0</span><span class="label">👨‍👩‍👧 Families Fed</span></div>
+        <div class="stat-box reveal"><span class="num" data-count="200">0</span><span class="label">📦 Ration Kits</span></div>
+        <div class="stat-box reveal"><span class="num" data-count="50">0</span><span class="label">❤️ Volunteers</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <div class="container-wide">
+      <h2 class="section-title reveal">📸 Moments That Matter</h2>
+      <p class="section-sub reveal">Click any photo to view it larger.</p>
+      <div class="gallery">
+        <div class="photo tall reveal"><img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=700&q=80" alt="Food" loading="lazy" /><div class="caption"><h4>Ration Kit Distribution</h4><p>Families receiving monthly ration</p></div></div>
+        <div class="photo reveal"><img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=700&q=80" alt="Meal" loading="lazy" /><div class="caption"><h4>Hot Meals Served</h4><p>Freshly cooked food for all</p></div></div>
+        <div class="photo reveal"><img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&w=700&q=80" alt="Volunteers" loading="lazy" /><div class="caption"><h4>Our Volunteers</h4><p>Hands that serve with love</p></div></div>
+        <div class="photo wide reveal"><img src="https://images.unsplash.com/photo-1595855759920-86582396756a?auto=format&fit=crop&w=900&q=80" alt="Community" loading="lazy" /><div class="caption"><h4>Community Kitchen</h4><p>Every meal cooked with care</p></div></div>
+        <div class="photo reveal"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80" alt="Plate" loading="lazy" /><div class="caption"><h4>A Plate Full of Hope</h4><p>Simple food, huge smiles</p></div></div>
+        <div class="photo tall reveal"><img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=700&q=80" alt="Children" loading="lazy" /><div class="caption"><h4>Feeding Little Ones</h4><p>Children are our priority</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="impact">
+    <div class="container">
+      <h2 class="section-title reveal">💭 Words That Inspire Us</h2>
+      <p class="section-sub reveal">These lines keep our volunteers going every single day.</p>
+      <div class="motivation-grid">
+        <div class="motivation-card reveal"><div class="q-icon">"</div><p>If you can't feed a hundred people, then feed just one.</p><div class="author">— Mother Teresa</div></div>
+        <div class="motivation-card reveal"><div class="q-icon">"</div><p>The simplest way to be happy is to do good for someone who can never repay you.</p><div class="author">— Anshika Foundation</div></div>
+        <div class="motivation-card reveal"><div class="q-icon">"</div><p>No one has ever become poor by giving.</p><div class="author">— Anne Frank</div></div>
+        <div class="motivation-card reveal"><div class="q-icon">"</div><p>A hungry stomach has no ears. Feed first, teach later.</p><div class="author">— Our Belief</div></div>
+        <div class="motivation-card reveal"><div class="q-icon">"</div><p>Service to man is service to God.</p><div class="author">— Ancient Wisdom</div></div>
+        <div class="motivation-card reveal"><div class="q-icon">"</div><p>We make a living by what we get, but we make a life by what we give.</p><div class="author">— Winston Churchill</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="help-cta">
+    <h2>Want To Help Feed The Poor?</h2>
+    <p>Even ₹100 can provide a full meal to a family. Your small act of kindness can fill an empty stomach today.</p>
+    <div class="help-buttons">
+      <a onclick="showPage('payment')" class="btn btn-primary">❤️ Donate Now</a>
+      <a onclick="showPage('volunteer')" class="btn btn-green">🤝 Volunteer</a>
+    </div>
+  </section>
+</div>
+
+<!-- ========== PAGE: HEALTH ========== -->
+<div id="page-health" class="page">
+  <section class="page-hero health-hero">
+    <h1>💊 Health Care Program</h1>
+    <p>Free medicines, health checkups, and medical support for the poor and elderly in Mira-Bhayandar.</p>
+    <div class="med-icons"><span>💊</span><span>🩺</span><span>🏥</span><span>❤️‍🩹</span><span>💉</span></div>
+  </section>
+
+  <section class="fun-stats">
+    <div class="fun-bubble"><div class="emoji">💊</div><div class="num" data-count="5000">0</div><div class="lbl">Medicines<br>Given</div></div>
+    <div class="fun-bubble"><div class="emoji">🩺</div><div class="num" data-count="800">0</div><div class="lbl">Health<br>Checkups</div></div>
+    <div class="fun-bubble"><div class="emoji">🏥</div><div class="num" data-count="25">0</div><div class="lbl">Medical<br>Camps</div></div>
+    <div class="fun-bubble"><div class="emoji">❤️</div><div class="num" data-count="1200">0</div><div class="lbl">Lives<br>Touched</div></div>
+  </section>
+
+  <section class="health-quote">
+    <p>"The greatest wealth is health. When we heal others, we heal ourselves."</p>
+    <span>— Our Mission</span>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title reveal">Our Health Services</h2>
+      <p class="section-sub reveal">Free medicines and medical support for those who cannot afford it.</p>
+      <div class="medicine-grid">
+        <div class="medicine-card reveal"><span class="med-icon">💊</span><h4>Free Medicines</h4><p>Essential medicines for poor families and elderly.</p></div>
+        <div class="medicine-card reveal"><span class="med-icon">🩺</span><h4>Health Checkups</h4><p>BP, sugar, and general health checkup camps.</p></div>
+        <div class="medicine-card reveal"><span class="med-icon">🏥</span><h4>Medical Camps</h4><p>Free doctor consultations every month.</p></div>
+        <div class="medicine-card reveal"><span class="med-icon">💉</span><h4>Vaccination Drive</h4><p>Free vaccination for children and elderly.</p></div>
+        <div class="medicine-card reveal"><span class="med-icon">❤️‍🩹</span><h4>First Aid Kits</h4><p>First aid kits for schools and families.</p></div>
+        <div class="medicine-card reveal"><span class="med-icon">🚑</span><h4>Emergency Help</h4><p>Emergency medical support for the needy.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="help-cta">
+    <h2>💚 Help Us Heal More Lives</h2>
+    <p>Even ₹200 can provide a month's medicine to an elderly person.</p>
+    <div class="help-buttons">
+      <a onclick="showPage('payment')" class="btn btn-primary">❤️ Donate Now</a>
+      <a onclick="showPage('volunteer')" class="btn btn-green">🤝 Volunteer</a>
+    </div>
+  </section>
+</div>
+
+<!-- ========== PAGE: ENVIRONMENT ========== -->
+<div id="page-environment" class="page">
+  <section class="page-hero env-hero">
+    <h1>🌱 Environment Support</h1>
+    <p>Planting trees, cleaning our streets, and protecting Mother Earth for the next generation.</p>
+    <div class="nature-icons"><span>🌱</span><span>🌳</span><span>🌍</span><span>♻️</span><span>💧</span></div>
+  </section>
+
+  <section class="eco-stats">
+    <div class="eco-bubble"><div class="emoji">🌳</div><div class="num" data-count="2500">0</div><div class="lbl">Trees<br>Planted</div></div>
+    <div class="eco-bubble"><div class="emoji">♻️</div><div class="num" data-count="150">0</div><div class="lbl">Clean-Up<br>Drives</div></div>
+    <div class="eco-bubble"><div class="emoji">🌱</div><div class="num" data-count="80">0</div><div class="lbl">Saplings<br>Distributed</div></div>
+    <div class="eco-bubble"><div class="emoji">💧</div><div class="num" data-count="5000">0</div><div class="lbl">Lives<br>Impacted</div></div>
+  </section>
+
+  <section class="eco-quote">
+    <p>"The Earth does not belong to us. We belong to the Earth. Plant a tree today — breathe tomorrow."</p>
+    <span>— Our Promise</span>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title reveal">Our Green Initiatives</h2>
+      <p class="section-sub reveal">Real actions that make our planet healthier.</p>
+      <div class="eco-grid">
+        <div class="eco-card reveal"><span class="eco-icon">🌳</span><h4>Tree Plantation</h4><p>Planting hundreds of saplings every year in schools and communities.</p></div>
+        <div class="eco-card reveal"><span class="eco-icon">♻️</span><h4>Clean-Up Drives</h4><p>Regular cleaning drives in streets, beaches, and neighborhoods.</p></div>
+        <div class="eco-card reveal"><span class="eco-icon">🌱</span><h4>Sapling Distribution</h4><p>Free saplings distributed to families for home gardening.</p></div>
+        <div class="eco-card reveal"><span class="eco-icon">💧</span><h4>Water Conservation</h4><p>Awareness on saving water and rainwater harvesting.</p></div>
+        <div class="eco-card reveal"><span class="eco-icon">🐦</span><h4>Bird Feeders</h4><p>Water pots and bird feeders during hot summers.</p></div>
+        <div class="eco-card reveal"><span class="eco-icon">🌍</span><h4>Awareness Programs</h4><p>Teaching recycling, plastic-free living, and eco habits.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="help-cta" style="background:linear-gradient(135deg,#16a34a,#065f46);">
+    <h2>🌱 Plant A Tree Today</h2>
+    <p>Just ₹300 can plant a tree that will live for 50+ years, giving oxygen and life to countless beings.</p>
+    <div class="help-buttons">
+      <a onclick="showPage('payment')" class="btn" style="background:#fff;color:#16a34a;">❤️ Donate ₹300</a>
+      <a onclick="showPage('volunteer')" class="btn btn-outline">🤝 Join Us</a>
+    </div>
+  </section>
+</div>
+
+<!-- ========== PAGE: VOLUNTEER ========== -->
+<div id="page-volunteer" class="page">
+  <section class="vol-hero">
+    <h1>🤝 Become A Volunteer</h1>
+    <p>Join our family of changemakers. Give your time, skills, and heart to make Mira-Bhayandar a better place.</p>
+    <div class="vol-icons"><span>🙋</span><span>💪</span><span>❤️</span><span>🌟</span></div>
+  </section>
+
+  <section class="why-vol">
+    <div class="container">
+      <h2 class="section-title reveal">Why Volunteer With Us?</h2>
+      <p class="section-sub reveal">There are so many reasons to join our mission.</p>
+      <div class="why-grid">
+        <div class="why-card reveal"><span class="why-icon">💖</span><h4>Make A Difference</h4><p>Your time directly impacts the lives of poor children and families.</p></div>
+        <div class="why-card reveal"><span class="why-icon">🎓</span><h4>Learn New Skills</h4><p>Gain experience in event management, teaching, and social work.</p></div>
+        <div class="why-card reveal"><span class="why-icon">👥</span><h4>Meet Great People</h4><p>Join a community of like-minded, kind-hearted individuals.</p></div>
+        <div class="why-card reveal"><span class="why-icon">📜</span><h4>Get Certificate</h4><p>Receive a volunteer certificate after your service completion.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="volunteer-form-section">
+    <div class="container">
+      <div class="vol-form-card">
+        <div id="volFormWrap">
+          <h2>📝 Volunteer Registration</h2>
+          <p class="sub">Fill this form and we'll contact you within 24 hours.</p>
+
+          <form action="https://formsubmit.co/anshikahelpinghandsfoundation@gmail.com" method="POST" id="volunteerForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Full Name <span class="req">*</span></label>
+                <input type="text" id="volName" required placeholder="Your full name" />
+              </div>
+              <div class="form-group">
+                <label>Age <span class="req">*</span></label>
+                <input type="number" id="volAge" required min="15" max="100" placeholder="Your age" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Mobile Number <span class="req">*</span></label>
+                <input type="tel" id="volPhone" required pattern="[0-9]{10}" placeholder="10-digit mobile" />
+              </div>
+              <div class="form-group">
+                <label>Email <span class="req">*</span></label>
+                <input type="email" id="volEmail" required placeholder="your@email.com" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>City / Area <span class="req">*</span></label>
+              <input type="text" id="volCity" required placeholder="e.g. Bhayandar East" />
+            </div>
+
+            <div class="form-group">
+              <label>Which area interests you? (Select multiple) <span class="req">*</span></label>
+              <div class="interest-grid">
+                <label class="interest-option" onclick="toggleInterest(this)"><input type="checkbox" value="Education" /> 📚 Education</label>
+                <label class="interest-option" onclick="toggleInterest(this)"><input type="checkbox" value="Food Distribution" /> 🍛 Food</label>
+                <label class="interest-option" onclick="toggleInterest(this)"><input type="checkbox" value="Health Care" /> 💊 Health</label>
+                <label class="interest-option" onclick="toggleInterest(this)"><input type="checkbox" value="Environment" /> 🌱 Environment</label>
+                <label class="interest-option" onclick="toggleInterest(this)"><input type="checkbox" value="Fundraising" /> 💰 Fundraising</label>
+                <label class="interest-option" onclick="toggleInterest(this)"><input type="checkbox" value="Social Media" /> 📱 Social Media</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Availability <span class="req">*</span></label>
+              <select id="volAvailability" required>
+                <option value="">-- Select --</option>
+                <option value="Weekdays">Weekdays</option>
+                <option value="Weekends">Weekends</option>
+                <option value="Evenings">Evenings</option>
+                <option value="Flexible">Flexible</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Why do you want to volunteer? (Optional)</label>
+              <textarea id="volMessage" placeholder="Tell us in a few words..."></textarea>
+            </div>
+
+            <button type="submit" class="vol-submit">🎉 Register As Volunteer</button>
+          </form>
+        </div>
+
+        <div class="vol-success" id="volSuccess">
+          <div class="success-icon">✓</div>
+          <h2>Welcome To The Family! 🎉</h2>
+          <p>"Your registration was successful! Our team will contact you soon.".</p>
+          <div class="vol-id-box">
+            <div class="lbl">Your Volunteer ID</div>
+            <div class="id" id="volIdDisplay">VOL-0000</div>
+          </div>
+          <div class="info-text">
+            📞 We will call you under 24 hours.<br>
+            📧 we will send details in gmail<br>
+          </div>
+          <div class="vol-buttons">
+            <button class="btn-print" onclick="printVolunteerID()">📥 Download ID</button>
+            <button class="btn-another" onclick="resetVolunteerForm()">➕ Register Another</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="help-cta">
+    <h2>Prefer To Donate Instead?</h2>
+    <p>If you can't volunteer right now, your donation can still make a huge difference.</p>
+    <div class="help-buttons">
+      <a onclick="showPage('payment')" class="btn btn-primary">❤️ Donate Now</a>
+      <a class="btn btn-outline" onclick="showPage('home','contact')">📞 Call Us</a>
+    </div>
+  </section>
+</div>
+
+<!-- ========== PAGE: PAYMENT ========== -->
+<div id="page-payment" class="page">
+  <div class="pay-wrapper">
+    <div class="pay-card">
+      <div class="pay-header">
+        <h2>❤️ Make a Donation</h2>
+        <p>Your contribution supports poor children, families, and our environment.</p>
+      </div>
+      <div class="pay-body">
+
+        <!-- DONOR DETAILS -->
+        <div class="donor-section">
+          <h3>📝 Donor Details (for 80G Receipt)</h3>
+          <div class="donor-grid">
+            <div class="donor-field">
+              <label>Full Name <span class="req">*</span></label>
+              <input type="text" id="donorName" placeholder="Your full name" />
+            </div>
+            <div class="donor-field">
+              <label>Mobile Number <span class="req">*</span></label>
+              <input type="tel" id="donorPhone" placeholder="10-digit mobile" maxlength="10" />
+            </div>
+            <div class="donor-field">
+              <label>Email <span class="req">*</span></label>
+              <input type="email" id="donorEmail" placeholder="your@email.com" />
+            </div>
+            <div class="donor-field">
+              <label>PAN Number (for 80G)</label>
+              <input type="text" id="donorPan" placeholder="ABCDE1234F" maxlength="10" style="text-transform:uppercase;" />
+            </div>
+            <div class="donor-field full">
+              <label>Full Address</label>
+              <textarea id="donorAddress" placeholder="Your full address" rows="2" style="resize:vertical;min-height:60px;"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="amount-label">💝 Select Amount</div>
+        <div class="pay-amount-grid" id="payAmountGrid">
+          <button class="pay-amount-btn" data-amount="500">₹500</button>
+          <button class="pay-amount-btn active" data-amount="1000">₹1,000</button>
+          <button class="pay-amount-btn" data-amount="2500">₹2,500</button>
+          <button class="pay-amount-btn" data-amount="5000">₹5,000</button>
+          <button class="pay-amount-btn" data-amount="11000">₹11,000</button>
+          <button class="pay-amount-btn" data-amount="21000">₹21,000</button>
+        </div>
+
+        <div class="pay-custom">
+          <label>Or enter custom amount:</label>
+          <input type="number" id="payCustomAmount" placeholder="Enter amount ₹" min="1" />
+        </div>
+
+        <div class="pay-impact" id="payImpact">
+          <span class="emoji" id="payImpactEmoji">📚</span>
+          <span class="text" id="payImpactText">Your <b>₹1,000</b> can provide school books for <b>2 children</b>!</span>
+        </div>
+
+        <button class="pay-btn-main" onclick="scrollToQR()">📱 Pay via UPI QR Code</button>
+
+        <div class="pay-divider">Scan QR Code</div>
+
+        <div class="qr-section" id="qrSection">
+          <h3>📱 Scan & Pay Instantly</h3>
+          <p class="qr-desc">Google Pay, PhonePe, Paytm, BHIM — any UPI app</p>
+        <div class="qr-box" style="text-align: center">
+    <img id="https://www.ahhfngo.com/qr-code.png"
+         src="https://www.ahhfngo.com/qr-code.png"
+         alt="UPI QR" />
+</div>
+          <div class="upi-row">
+            <span class="lbl">UPI ID</span>
+            <span class="val" id="upiIdDisplay">qr919920446089-2763@unionbankofindia</span>
+            <button class="cpy" onclick="copyUPI()">Copy</button>
+          </div>
+          <p style="color:#888;font-size:.8rem;margin-top:8px;">You can pay via UPI using the above ID or QR code. Thank you!</p>
+        </div>
+
+        <!-- BANK DETAILS -->
+        <div class="bank-section">
+          <h3>🏦 Bank Transfer Details</h3>
+          <div class="bank-grid">
+            <div class="bank-item">
+              <div class="bank-label">Account Name</div>
+              <div class="bank-value">Anshika Helping Hands Foundation</div>
+            </div>
+            <div class="bank-item">
+              <div class="bank-label">Account Number</div>
+              <div class="bank-value">1234567890</div>
+              <button class="bank-copy" onclick="copyText('1234567890', 'Account Number')">📋 Copy</button>
+            </div>
+            <div class="bank-item">
+              <div class="bank-label">IFSC Code</div>
+              <div class="bank-value">SBIN0001234</div>
+              <button class="bank-copy" onclick="copyText('SBIN0001234', 'IFSC Code')">📋 Copy</button>
+            </div>
+            <div class="bank-item">
+              <div class="bank-label">Bank Name</div>
+              <div class="bank-value">State Bank of India</div>
+            </div>
+            <div class="bank-item">
+              <div class="bank-label">Branch</div>
+              <div class="bank-value">Bhayandar East</div>
+            </div>
+            <div class="bank-item">
+              <div class="bank-label">Account Type</div>
+              <div class="bank-value">Savings</div>
+            </div>
+          </div>
+          <p style="margin-top:15px;font-size:.82rem;color:#92400e;text-align:center;">
+            ⚠️ Apni real bank details yahan update karo
+          </p>
+        </div>
+
+        <div class="trust-badges">
+          <div class="trust-item"><div class="trust-icon">✓</div><span>100% Secure</span></div>
+          <div class="trust-item"><div class="trust-icon">🎁</div><span>80G Receipt</span></div>
+          <div class="trust-item"><div class="trust-icon">⚡</div><span>Instant</span></div>
+          <div class="trust-item"><div class="trust-icon">💚</div><span>Transparent</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkj_XotcbrSHpfwhKok1M6ViVQrRRgrUwYzHjlFlHWXIm0JwQWD32dOIR6ICkSzfXflTnR_2c8Bm08CzE2hDhM37aH5IrJ9hjnnyrpX9_UydmrxGp-3LrM_BeaocKSuOUrtjEqqv_1JQeIT=w165-h165-n-k-no-nu">
+    <span>Anshika Helping Hands Foundation</span>
+  </div>
+  <p>Serving the Mira-Bhayandar community with honesty and compassion.<br>Dedicated to creating positive change in communities through compassionate action, education,<br> and sustainable development programs.
+
+Making a difference, one life at a time
+</p>
+
+  <div class="footer-socials">
+    <a href="https://www.instagram.com/anshikahelpinghands?igsh=cnZpa3M4ZXd0dXZo" target="_blank" class="fs-icon fs-instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.youtube.com/@anshikahelpinghandsfoundation?si=tPcU59xKQ2bxzllA" target="_blank" class="fs-icon fs-youtube" title="YouTube"><i class="fab fa-youtube"></i></a>
+    <a href="mailto:anshikahelpinghandsfoundation@gmail.com" class="fs-icon fs-email" title="Email"><i class="fas fa-envelope"></i></a>
+    <a href="https://www.facebook.com/share/1BAfy4GJcE/?mibextid=wwXIfr" target="_blank" class="fs-icon fs-facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://wa.me/+919920446089" target="_blank" class="fs-icon fs-whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  </div>
+
+  <div class="footer-links">
+    <a onclick="showPage('home')">Home</a>
+    <a onclick="showPage('education')">Education</a>
+    <a onclick="showPage('food')">Food</a>
+    <a onclick="showPage('health')">Health</a>
+    <a onclick="showPage('environment')">Environment</a>
+    <a onclick="showPage('volunteer')">Volunteer</a>
+    <a onclick="showPage('home','contact')">Contact</a>
+    <a onclick="showPage('payment')">Donate</a>
+  </div>
+  <div class="copyright">
+    © <span id="year"></span> Anshika Helping Hands Foundation · All rights reserved. Develop by Yogesh Vaishnav
+  </div>
+</footer>
+
+<!-- SUCCESS MODAL -->
+<div class="success-modal" id="successModal">
+  <div class="success-content">
+    <div class="s-icon">✓</div>
+    <h2>🙏 Thank You!</h2>
+    <p class="msg">You make the payment.<br>Our team send you a conformation.</p>
+    <div class="details">
+      <div class="det-row"><span class="lbl">Amount:</span><span class="val amt" id="successAmount">₹0</span></div>
+      <div class="det-row"><span class="lbl">Donor:</span><span class="val" id="successDonor">-</span></div>
+      <div class="det-row"><span class="lbl">Status:</span><span class="val ok">✓ Pending Confirmation</span></div>
+    </div>
+    <div class="note">📧 Confirmation message aur 80G receipt jald bhej diya jayega. Call: <b>099204 46089</b></div>
+    <button class="close-btn" onclick="closeSuccess()">Close</button>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="close" onclick="closeLightbox(event)">×</button>
+  <img src="" alt="Enlarged" id="lightboxImg" onclick="event.stopPropagation()" />
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+  const UPI_ID = 'qr919920446089-2763@unionbankofindia';
+  const NGO_NAME = 'Anshika Helping Hands Foundation';
+  const NGO_PHONE = '9920446089';
+  const OWNER_EMAIL = 'anshikahelpinghandsfoundation@gmail.com';
+
+  function showPage(pageName, scrollTo){
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    const target = document.getElementById('page-' + pageName);
+    if(target) target.classList.add('active');
+
+    document.querySelectorAll('#navLinks a[data-page]').forEach(a => {
+      a.classList.toggle('active', a.dataset.page === pageName);
+    });
+
+    document.getElementById('navLinks').classList.remove('open');
+
+    if(scrollTo){
+      setTimeout(() => {
+        const el = document.getElementById(scrollTo);
+        if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+      }, 150);
+    } else {
+      window.scrollTo({top:0, behavior:'smooth'});
+    }
+
+    setTimeout(() => {
+      const page = document.getElementById('page-' + pageName);
+      if(!page) return;
+      page.querySelectorAll('.reveal, .stat-box, .fun-bubble, .eco-bubble').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if(rect.top < window.innerHeight + 100){
+          el.classList.add('visible');
+          const numEl = el.querySelector('.num');
+          if(numEl && numEl.dataset.count && !numEl.dataset.done){
+            animateCount(numEl);
+            numEl.dataset.done = '1';
+          }
+        }
+      });
+    }, 250);
+  }
+
+  function animateCount(el){
+    if(!el.dataset.count) return;
+    const target = parseInt(el.dataset.count);
+    const duration = 1800;
+    const start = performance.now();
+    function step(now){
+      const progress = Math.min((now - start) / duration, 1);
+      const easeOut = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(easeOut * target).toLocaleString('en-IN') + (progress === 1 ? '+' : '');
+      if(progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        const numEl = entry.target.querySelector('.num');
+        if(numEl && numEl.dataset.count && !numEl.dataset.done){
+          animateCount(numEl);
+          numEl.dataset.done = '1';
+        }
+      }
+    });
+  }, {threshold: 0.15});
+
+  document.querySelectorAll('.reveal, .stat-box, .fun-bubble, .eco-bubble').forEach(el => revealObserver.observe(el));
+
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+
+  document.addEventListener('click', function(e){
+    const photo = e.target.closest('.photo');
+    if(photo && !e.target.closest('.lightbox')){
+      const img = photo.querySelector('img');
+      if(img){
+        lightboxImg.src = img.src;
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+  });
+
+  function closeLightbox(e){
+    if(e) e.stopPropagation();
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', e => {
+    if(e.key === 'Escape') closeLightbox();
+  });
+
+  let selectedAmount = 1000;
+  const payAmountBtns = document.querySelectorAll('.pay-amount-btn');
+  const payCustomInput = document.getElementById('payCustomAmount');
+
+  payAmountBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      payAmountBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      selectedAmount = parseInt(btn.dataset.amount);
+      payCustomInput.value = '';
+      updatePayImpact();
+      updateQRCode();
+    });
+  });
+
+  payCustomInput.addEventListener('input', () => {
+    if(payCustomInput.value){
+      payAmountBtns.forEach(b => b.classList.remove('active'));
+      selectedAmount = parseInt(payCustomInput.value) || 0;
+      updatePayImpact();
+      updateQRCode();
+    }
+  });
+
+  function updatePayImpact(){
+    const emoji = document.getElementById('payImpactEmoji');
+    const text = document.getElementById('payImpactText');
+    const amount = selectedAmount;
+    let impact = '', icon = '❤️';
+    if(amount < 500){ icon='🍛'; impact=`Your <b>₹${amount}</b> can provide a meal to a hungry person!`; }
+    else if(amount < 1000){ icon='📖'; impact=`Your <b>₹${amount}</b> can provide books for 1 child!`; }
+    else if(amount < 2500){ icon='📚'; impact=`Your <b>₹${amount}</b> can provide school books for <b>2 children</b>!`; }
+    else if(amount < 5000){ icon='🎒'; impact=`Your <b>₹${amount}</b> can provide a school kit for <b>1 child</b>!`; }
+    else if(amount < 11000){ icon='💊'; impact=`Your <b>₹${amount}</b> can provide medicines for <b>25 people</b>!`; }
+    else if(amount < 20000){ icon='🎓'; impact=`Your <b>₹${amount}</b> can sponsor <b>1 child's full year</b> education!`; }
+    else { icon='🌳'; impact=`Your <b>₹${amount}</b> can plant <b>${Math.floor(amount/300)} trees</b>!`; }
+    emoji.textContent = icon;
+    text.innerHTML = impact;
+  }
+
+  function updateQRCode(){
+    if(!selectedAmount) return;
+    const upiUrl = `upi://pay?pa=${UPI_ID}&pn=${encodeURIComponent(NGO_NAME)}&am=${selectedAmount}&cu=INR`;
+    const qrApiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(upiUrl)}`;
+    document.getElementById('qrImage').src = qrApiUrl;
+    document.getElementById('upiIdDisplay').textContent = UPI_ID;
+  }
+
+  function scrollToQR(){
+    if(!selectedAmount || selectedAmount < 1){
+      showToast('⚠️ Please select or enter a valid amount.', 'error');
+      return;
+    }
+    updateQRCode();
+    document.getElementById('qrSection').scrollIntoView({behavior:'smooth', block:'center'});
+    showToast('📱 Scan the QR code with any UPI app', 'success');
+  }
+
+  function copyUPI(){
+    navigator.clipboard.writeText(UPI_ID).then(() => {
+      showToast('✅ UPI ID copied: ' + UPI_ID, 'success');
+    }).catch(() => showToast('❌ Copy failed.', 'error'));
+  }
+
+  function copyText(text, label){
+    navigator.clipboard.writeText(text).then(() => {
+      showToast('✅ ' + label + ' copied!', 'success');
+    }).catch(() => showToast('❌ Copy failed.', 'error'));
+  }
+
+  function closeSuccess(){
+    document.getElementById('successModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('successModal').addEventListener('click', function(e){
+    if(e.target === this) closeSuccess();
+  });
+
+  function sponsorNow(amount){
+    selectedAmount = amount;
+    payAmountBtns.forEach(b => {
+      b.classList.toggle('active', parseInt(b.dataset.amount) === amount);
+    });
+    if(![...payAmountBtns].some(b => parseInt(b.dataset.amount) === amount)){
+      payAmountBtns.forEach(b => b.classList.remove('active'));
+      payCustomInput.value = amount;
+    }
+    updatePayImpact();
+    updateQRCode();
+    showPage('payment');
+  }
+
+  let toastTimer;
+  function showToast(message, type = 'success'){
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.className = 'toast ' + type + ' show';
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 3500);
+  }
+
+  function toggleInterest(el){
+    setTimeout(() => {
+      const checkbox = el.querySelector('input[type="checkbox"]');
+      if(checkbox.checked){
+        el.classList.add('selected');
+      } else {
+        el.classList.remove('selected');
+      }
+    }, 10);
+  }
+
+  function submitVolunteer(e){
+    e.preventDefault();
+
+    const name = document.getElementById('volName').value.trim();
+    const age = document.getElementById('volAge').value.trim();
+    const phone = document.getElementById('volPhone').value.trim();
+    const email = document.getElementById('volEmail').value.trim();
+    const city = document.getElementById('volCity').value.trim();
+    const availability = document.getElementById('volAvailability').value;
+    const message = document.getElementById('volMessage').value.trim();
+
+    const interests = [];
+    document.querySelectorAll('.interest-option input:checked').forEach(cb => {
+      interests.push(cb.value);
+    });
+
+    if(!name || !age || !phone || !email || !city || !availability){
+      showToast('⚠️ Please fill all required fields.', 'error');
+      return;
+    }
+    if(interests.length === 0){
+      showToast('⚠️ Please select at least one area of interest.', 'error');
+      return;
+    }
+    if(phone.length !== 10 || !/^\d{10}$/.test(phone)){
+      showToast('⚠️ Please enter a valid 10-digit mobile number.', 'error');
+      return;
+    }
+
+    const volId = 'VOL-' + Date.now().toString().slice(-6);
+
+    const volunteer = {
+      id: volId,
+      name, age, phone, email, city, availability, message,
+      interests,
+      registeredAt: new Date().toISOString()
+    };
+
+    const allVolunteers = JSON.parse(localStorage.getItem('anshika_volunteers') || '[]');
+    allVolunteers.push(volunteer);
+    localStorage.setItem('anshika_volunteers', JSON.stringify(allVolunteers));
+
+    const form = document.getElementById('volunteerForm');
+    const hiddenFields = `
+      <input type="hidden" name="Volunteer_ID" value="${volId}">
+      <input type="hidden" name="Name" value="${name}">
+      <input type="hidden" name="Age" value="${age}">
+      <input type="hidden" name="Phone" value="${phone}">
+      <input type="hidden" name="Email" value="${email}">
+      <input type="hidden" name="City" value="${city}">
+      <input type="hidden" name="Interests" value="${interests.join(', ')}">
+      <input type="hidden" name="Availability" value="${availability}">
+      <input type="hidden" name="Message" value="${message}">
+      <input type="hidden" name="_subject" value="🎉 New Volunteer Registration - ${name}">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+    `;
+    form.querySelectorAll('input[type="hidden"]').forEach(el => el.remove());
+    form.insertAdjacentHTML('beforeend', hiddenFields);
+    form.submit();
+
+    document.getElementById('volFormWrap').style.display = 'none';
+    document.getElementById('volSuccess').classList.add('show');
+    document.getElementById('volIdDisplay').textContent = volId;
+
+    showToast('🎉 Registration successful! Owner ko email bhej diya.', 'success');
+
+    setTimeout(() => {
+      document.getElementById('volSuccess').scrollIntoView({behavior:'smooth', block:'center'});
+    }, 300);
+  }
+
+  function resetVolunteerForm(){
+    document.getElementById('volunteerForm').reset();
+    document.querySelectorAll('.interest-option').forEach(el => el.classList.remove('selected'));
+    document.getElementById('volFormWrap').style.display = 'block';
+    document.getElementById('volSuccess').classList.remove('show');
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+
+  function printVolunteerID(){
+    const volId = document.getElementById('volIdDisplay').textContent;
+    const name = document.getElementById('volName').value;
+    const city = document.getElementById('volCity').value;
+    const interests = [...document.querySelectorAll('.interest-option input:checked')].map(cb => cb.value).join(', ');
+
+    const printWindow = window.open('', '_blank');
+    printWindow.document.write(`
+      <html>
+      <head>
+        <title>Volunteer ID - ${volId}</title>
+        <style>
+          body{font-family:'Segoe UI',sans-serif;padding:40px;background:#f0fdf4;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;}
+          .card{background:#fff;padding:40px;border-radius:20px;box-shadow:0 10px 40px rgba(0,0,0,.15);max-width:500px;text-align:center;border-top:6px solid #2a9d8f;}
+          .logo{font-size:2rem;margin-bottom:10px;}
+          h1{color:#1d3557;margin-bottom:5px;font-size:1.3rem;}
+          .sub{color:#2a9d8f;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:25px;font-weight:600;}
+          .id-box{background:linear-gradient(135deg,#dcfce7,#bbf7d0);padding:25px;border-radius:15px;margin:20px 0;border:2px dashed #16a34a;}
+          .id-box .lbl{font-size:.75rem;color:#666;text-transform:uppercase;letter-spacing:1px;font-weight:600;}
+          .id-box .id{font-size:2rem;font-weight:800;color:#065f46;letter-spacing:2px;margin-top:5px;}
+          .info{text-align:left;background:#f8f9fa;padding:20px;border-radius:12px;margin-top:20px;}
+          .info-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #e0e0e0;}
+          .info-row:last-child{border-bottom:none;}
+          .info-row .lbl{color:#666;font-size:.85rem;}
+          .info-row .val{color:#1d3557;font-weight:600;font-size:.85rem;}
+          .footer{margin-top:25px;color:#666;font-size:.8rem;}
+          .footer b{color:#e63946;}
+        </style>
+      </head>
+      <body>
+        <div class="card">
+          <div class="logo">🤝</div>
+          <h1>Anshika Helping Hands Foundation</h1>
+          <div class="sub">Volunteer ID Card</div>
+          <div class="id-box">
+            <div class="lbl">Volunteer ID</div>
+            <div class="id">${volId}</div>
+          </div>
+          <div class="info">
+            <div class="info-row"><span class="lbl">Name:</span><span class="val">${name}</span></div>
+            <div class="info-row"><span class="lbl">City:</span><span class="val">${city}</span></div>
+            <div class="info-row"><span class="lbl">Interests:</span><span class="val">${interests}</span></div>
+            <div class="info-row"><span class="lbl">Date:</span><span class="val">${new Date().toLocaleDateString('en-IN')}</span></div>
+          </div>
+          <div class="footer">
+            Thank you for joining our mission!<br>
+            <b>📞 099204 46089</b>
+          </div>
+        </div>
+        <script>window.onload = () => window.print();<\/script>
+      </body>
+      </html>
+    `);
+    printWindow.document.close();
+  }
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+  updatePayImpact();
+  updateQRCode();
+</script>
+</body>
+</html>

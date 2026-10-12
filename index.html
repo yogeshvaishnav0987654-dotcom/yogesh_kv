@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Anshika Helping Hands Foundation | Mira-Bhayandar NGO</title>
+<meta name="description" content="Anshika Helping Hands Foundation - Helping poor children, families with education, food, healthcare, and environment." />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- HEADER -->
+<!-- ========== NAVIGATION (NGOPRESS STYLE) ========== -->
+<!-- ========== NAVIGATION (NGOPRESS STYLE) ========== -->
+<header class="ngo-header">
+  <nav class="ngo-nav">
+
+    <!-- LEFT: LOGO -->
+    <a class="ngo-logo" onclick="showPage('home')">
+      <div class="ngo-logo-icon">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkj_XotcbrSHpfwhKok1M6ViVQrRRgrUwYzHjlFlHWXIm0JwQWD32dOIR6ICkSzfXflTnR_2c8Bm08CzE2hDhM37aH5IrJ9hjnnyrpX9_UydmrxGp-3LrM_BeaocKSuOUrtjEqqv_1JQeIT=w218-h218-n-k-no-nu" alt="Logo" onerror="this.parentElement.innerHTML='🤝'">
+      </div>
+      <div class="ngo-logo-text">
+        <span class="ngo-logo-main">Anshika</span>
+        <span class="ngo-logo-sub">Helping Hands Foundation</span>
+      </div>
+    </a>
+
+    <!-- MIDDLE: NAV LINKS -->
+    <ul class="ngo-nav-links" id="ngoNavLinks">
+
+      <!-- HOME -->
+      <li class="ngo-nav-item">
+        <a onclick="showPage('home')" data-page="home" class="ngo-nav-link ngo-nav-active">
+          Home <span class="ngo-caret">▾</span>
+        </a>
+        <ul class="ngo-dropdown">
+          <li><a onclick="showPage('home')">Home - Main</a></li>
+          <li><a onclick="showPage('home','about')">About Us</a></li>
+          <li><a onclick="showPage('home','contact')">Contact Us</a></li>
+          <li><a onclick="showPage('home','reviews')">Reviews</a></li>
+        </ul>
+      </li>
+
+      <!-- MORE -->
+      <li class="ngo-nav-item">
+        <a onclick="showPage('volunteer')" data-page="volunteer" class="ngo-nav-link ngo-nav-hot">
+          More <span class="ngo-caret">▾</span>
+        </a>
+        <ul class="ngo-dropdown">
+          <li><a onclick="showPage('volunteer')">Become Volunteer</a></li>
+          <li><a onclick="showPage('payment')">Donate Now</a></li>
+          <li><a onclick="showPage('education')">Education</a></li>
+          <li><a onclick="showPage('health')">Health Care</a></li>
+        </ul>
+      </li>
+
+      <!-- FEATURES -->
+      <li class="ngo-nav-item">
+        <a class="ngo-nav-link">
+          Features <span class="ngo-caret">▾</span>
+        </a>
+        <ul class="ngo-dropdown">
+          <li><a onclick="showPage('education')">📚 Education Support</a></li>
+          <li><a onclick="showPage('food')">🍛 Food Distribution</a></li>
+          <li><a onclick="showPage('health')">💊 Health Care</a></li>
+          <li><a onclick="showPage('environment')">🌱 Environment</a></li>
+        </ul>
+      </li>
+
+      <!-- PAGES -->
+      <li class="ngo-nav-item">
+        <a class="ngo-nav-link">
+          Pages <span class="ngo-caret">▾</span>
+        </a>
+        <ul class="ngo-dropdown">
+          <li><a onclick="showPage('home')">🏠 Home</a></li>
+          <li><a onclick="showPage('volunteer')">🤝 Volunteer</a></li>
+          <li><a onclick="showPage('payment')">❤️ Donate</a></li>
+          <li><a onclick="showPage('home','about')">👥 About Us</a></li>
+          <li><a onclick="showPage('home','contact')">📍 Contact</a></li>
+          <li><a onclick="showPage('home','reviews')">⭐ Reviews</a></li>
+        </ul>
+      </li>
+
+      <!-- NEWS -->
+      <li class="ngo-nav-item">
+        <a class="ngo-nav-link">
+          News <span class="ngo-caret">▾</span>
+        </a>
+        <ul class="ngo-dropdown">
+          <li><a onclick="showPage('food')">🍛 Food Drive Updates</a></li>
+          <li><a onclick="showPage('health')">💊 Health Camp News</a></li>
+          <li><a onclick="showPage('environment')">🌳 Tree Plantation</a></li>
+          <li><a onclick="showPage('education')">📚 Education Updates</a></li>
+        </ul>
+      </li>
+
+      <!-- SHOP -->
+      <li class="ngo-nav-item">
+        <a class="ngo-nav-link">
+          Shop <span class="ngo-caret">▾</span>
+        </a>
+        <ul class="ngo-dropdown">
+          <li><a onclick="showPage('payment')">🎁 Donate Products</a></li>
+          <li><a onclick="showPage('payment')">💝 Gift a Donation</a></li>
+          <li><a onclick="showPage('volunteer')">👕 Volunteer Kits</a></li>
+          <li><a onclick="showPage('payment')">🛒 All Products</a></li>
+        </ul>
+      </li>
+
+      <!-- SHORTCODES -->
+      <li class="ngo-nav-item">
+        <a class="ngo-nav-link">
+          Shortcodes <span class="ngo-caret">▾</span>
+        </a>
+        <ul class="ngo-dropdown">
+          <li><a onclick="showPage('home')">Home Layout</a></li>
+          <li><a onclick="showPage('education')">Education Layout</a></li>
+          <li><a onclick="showPage('food')">Food Layout</a></li>
+          <li><a onclick="showPage('health')">Health Layout</a></li>
+        </ul>
+      </li>
+
+    </ul>
+
+    <!-- RIGHT: ICONS -->
+    <div class="ngo-nav-icons">
+
+      <!-- Search -->
+      <button class="ngo-icon-btn" onclick="toggleSearch()" title="Search">
+        <i class="fas fa-search"></i>
+      </button>
+
+      <!-- Cart -->
+      <button class="ngo-icon-btn ngo-cart-btn" onclick="showPage('payment')" title="Cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="ngo-cart-badge">1</span>
+      </button>
+
+      <!-- Menu (☰ — Side Panel Open) -->
+      <button class="ngo-icon-btn ngo-menu-btn" onclick="openSidePanel()" title="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+    </div>
+
+  </nav>
+
+  <!-- SEARCH BAR -->
+  <div class="ngo-search-bar" id="ngoSearchBar">
+    <input type="text" placeholder="Search across our website..." />
+    <button onclick="toggleSearch()">✕</button>
+  </div>
+</header>
+<!-- ========== PAGE: HOME ========== -->
+<div id="page-home" class="page active">
+  <section class="hero">
+    <div class="hero-badge">⭐ 5.0 Google Rating · Mira-Bhayandar, Maharashtra</div>
+    <h1>Anshika Helping Hands Foundation</h1>
+    <p>A group of sincere, honest, and hardworking people dedicated to serving poor children and families in Mira-Bhayandar. Your small contribution can change a life.</p>
+    <div class="cta-buttons">
+      <a onclick="showPage('payment')" class="btn btn-primary">❤️ Donate Now</a>
+      <a onclick="showPage('education')" class="btn btn-outline">📚 Our Work</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">Who We Are</h2>
+      <p class="section-sub">A registered social services organization committed to uplifting underprivileged children and families in Bhayandar East.</p>
+      <div class="about-grid">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkSo8y9SjC5Hdlc-L4Lhwrb6sKiyGvcxTAqcSvCx3Tomio_sHskmLl_nYEt-h_jHDT4mh3AEQK2qj_KjQFhf65GE_Q4wUWlmilof7-jl8ji0PKNH03RZg5tWQz_EyT-D8UG5DhjUTWtEY15=s680-w680-h510-rw" alt="Volunteers" />
+        <div class="about-text">
+          <h3>Helping Hands, Changing Lives</h3>
+          <p>Anshika Helping Hands Foundation is a grassroots NGO based in Narmada Nagar, Bhayandar East. We focus on child welfare, education, food distribution, healthcare, and environment.</p>
+          <p>Our team of dedicated volunteers works tirelessly to provide food, education, and basic necessities to those who need it most.</p>
+          <div class="stat-row">
+            <div class="stat"><b>5.0★</b><span>Google Rating</span></div>
+            <div class="stat"><b>150+</b><span>Children Helped</span></div>
+            <div class="stat"><b>100%</b><span>Transparent</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="impact" id="impact">
+    <div class="container">
+      <h2 class="section-title">Our Work</h2>
+      <p class="section-sub">Every contribution creates a ripple of change in our community.</p>
+      <div class="cards">
+        <div class="card" onclick="showPage('education')" style="cursor:pointer;">
+          <div class="icon">📚</div><h4>Education Support</h4>
+          <p>School fees, books, uniforms, and free tuition for children.</p>
+          <p style="color:#e63946;font-weight:600;margin-top:12px;">Learn More →</p>
+        </div>
+        <div class="card" onclick="showPage('food')" style="cursor:pointer;">
+          <div class="icon">🍛</div><h4>Food Distribution</h4>
+          <p>Regular meal drives and ration kits for families in need.</p>
+          <p style="color:#e63946;font-weight:600;margin-top:12px;">See Photos →</p>
+        </div>
+        <div class="card" onclick="showPage('health')" style="cursor:pointer;">
+          <div class="icon">💊</div><h4>Health Care</h4>
+          <p>Free medicines, health camps, and medical support.</p>
+          <p style="color:#e63946;font-weight:600;margin-top:12px;">Learn More →</p>
+        </div>
+        <div class="card" onclick="showPage('environment')" style="cursor:pointer;">
+          <div class="icon">🌱</div><h4>Environment</h4>
+          <p>Tree plantation and clean-up drives for a better planet.</p>
+          <p style="color:#16a34a;font-weight:600;margin-top:12px;">Go Green →</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="help-cta">
+    <h2>Want To Make A Difference?</h2>
+    <p>Join our team of dedicated volunteers or donate to support our mission. Every small act of kindness counts.</p>
+    <div class="help-buttons">
+      <a onclick="showPage('payment')" class="btn btn-primary">❤️ Donate Now</a>
+      <a onclick="showPage('volunteer')" class="btn btn-green">🤝 Become a Volunteer</a>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <h2 class="section-title">What People Say</h2>
+      <p class="section-sub">Rated 5.0 on Google by our community.</p>
+      <div class="review-grid">
+        <div class="review"><div class="stars">★★★★★</div><p>"A group of sincere, honest, hardworking people."</p><div class="author">Jitendra Upadhyay</div><div class="role">Google Review</div></div>
+        <div class="review"><div class="stars">★★★★★</div><p>"Best service in poor children helping."</p><div class="author">New Patel Medical</div><div class="role">Google Review</div></div>
+        <div class="review"><div class="stars">★★★★★</div><p>"Best social services, child help — truly dedicated team."</p><div class="author">Savita Yadav</div><div class="role">Google Review</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="section-title">Visit or Contact Us</h2>
+      <p class="section-sub">We're open daily until 9:30 PM. Come meet our team!</p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <div class="contact-item"><div class="ci-icon">📍</div><div><b>Address</b>Shop No.2, New Sagar Samrat CHS Ltd, Cabin Cross Rd,<br>Hema Kunj, Narmada Nagar, Bhayandar East,<br>Mira Bhayandar, Maharashtra 401105</div></div>
+          <div class="contact-item"><div class="ci-icon">📞</div><div><b>Phone</b><a href="tel:09920446089">099204 46089</a></div></div>
+          <div class="contact-item"><div class="ci-icon">🕐</div><div><b>Hours</b>Open daily · Closes 9:30 PM</div></div>
+          <div class="contact-item"><div class="ci-icon">⭐</div><div><b>Google Rating</b>5.0 ★ · Social Services Organization</div></div>
+        </div>
+        <div class="map-box">
+          <iframe src="https://www.google.com/maps?q=Anshika+Helping+Hands+Foundation+Bhayandar+East&output=embed" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ========== PAGE: EDUCATION ========== -->
+<div id="page-education" class="page">
+  <section class="page-hero">
+    <h1>📚 Education For Every Child</h1>
+    <p>We believe every child deserves a chance to learn, grow, and dream. Our education program supports underprivileged children in Mira-Bhayandar.</p>
+  </section>
+
+  <section style="background:var(--light);">
+    <div class="container">
+      <h2 class="section-title reveal">Our Education Impact</h2>
+      <p class="section-sub reveal">Numbers that represent real children whose lives have changed.</p>
+      <div class="stats-grid">
+        <div class="stat-box reveal"><span class="num" data-count="150">0</span><span class="label">Children Supported</span></div>
+        <div class="stat-box reveal"><span class="num" data-count="45">0</span><span class="label">School Fees Paid</span></div>
+        <div class="stat-box reveal"><span class="num" data-count="500">0</span><span class="label">Books Distributed</span></div>
+        <div class="stat-box reveal"><span class="num" data-count="12">0</span><span class="label">Schools Partnered</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title reveal">What We Provide</h2>
+      <p class="section-sub reveal">Comprehensive support that removes every barrier.</p>
+      <div class="program-grid">
+        <div class="program-card reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkSo8y9SjC5Hdlc-L4Lhwrb6sKiyGvcxTAqcSvCx3Tomio_sHskmLl_nYEt-h_jHDT4mh3AEQK2qj_KjQFhf65GE_Q4wUWlmilof7-jl8ji0PKNH03RZg5tWQz_EyT-D8UG5DhjUTWtEY15=w243-h174-n-k-no-nu" alt="Fees" /><div class="program-body"><span class="program-tag">Financial Aid</span><h3>School Fee Assistance</h3><p>We pay school fees for children whose families cannot afford it.</p></div></div>
+        <div class="program-card reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnpnzNX9IHT-RZghrgMCvzQ9Q45l2cgOjYHgWZy8aQiJnq5GT4u0nqa546OnrlIyCZOAmex4Y4LyVoO66I2jRFZt5dMKXQM1AQzicifaEN-NlbNFyzf3a89FPyjh7H5Xo1DD28YoNho3Upj=w243-h174-n-k-no-nu" alt="Books" /><div class="program-body"><span class="program-tag">Study Material</span><h3>Books & Stationery</h3><p>Notebooks, textbooks, bags, and stationery kits for children.</p></div></div>
+        <div class="program-card reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnB7j2vDS4xJL8kELuW801H5D7yPGyGp4-wEV2_jE2DYI_iXfXq5kOYjzZI5Gm2PaLz8PWuHyhhxbdWrM9MrYllwx8e2Cc9w_X1Zrq8rRdTORAvcR7BBmH0zYyO2rGMnuhK1W8ZX-R4vJU=w243-h304-n-k-no-nu" alt="Tuition" /><div class="program-body"><span class="program-tag">Coaching</span><h3>Free Tuition Classes</h3><p>Volunteer teachers conduct free evening classes for children.</p></div></div>
+        <div class="program-card reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk7bC58A6Ppcl9Rm0Z77XXXbCgTewjCamR1k08RV8JMtm_OsKTBrbkC_KJbo1N5Hb87x0OnPEOxquDhHQBFrAvwa7kYJtPz1BCnj2b_-nIBqk1IrOVktqVEqJeufUgxNnFlQwMlEGPqQoJ-=w243-h406-n-k-no-nu" alt="Meals" /><div class="program-body"><span class="program-tag">Nutrition</span><h3>Mid-Day Meals</h3><p>A hungry child cannot learn. We provide nutritious meals.</p></div></div>
+        <div class="program-card reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkrk98Sl3VtqqM61tvD4cFwDckZCl-S66bLCCGGJV74eBnYdNeL5a7sr4IeqyQiZFoIYMb8eIjHuAkcuhlSboiEWEHo8L-YdNf46Q7Q1IysvgEpovUabqI7-iaJktUn-_3OizL0Vt3T5q6n=w243-h203-n-k-no-nu" alt="Computer" /><div class="program-body"><span class="program-tag">Digital Skills</span><h3>Computer Literacy</h3><p>Basic computer training for older children.</p></div></div>
+        <div class="program-card reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkj_XotcbrSHpfwhKok1M6ViVQrRRgrUwYzHjlFlHWXIm0JwQWD32dOIR6ICkSzfXflTnR_2c8Bm08CzE2hDhM37aH5IrJ9hjnnyrpX9_UydmrxGp-3LrM_BeaocKSuOUrtjEqqv_1JQeIT=w243-h244-n-k-no-nu" alt="Girl" /><div class="program-body"><span class="program-tag">Girl Child</span><h3>Beti Padhao</h3><p>Special focus on girls' education for equal opportunities.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-strip">
+    <p>"Education is the most powerful weapon which you can use to change the world."</p>
+    <span>— Nelson Mandela</span>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title reveal">How We Work</h2>
+      <p class="section-sub reveal">A simple, transparent process.</p>
+      <div class="timeline-wrap">
+        <div class="tl-item"><div class="dot"></div><div class="tl-content"><h4>1. Identify</h4><p>Volunteers identify children in need through schools.</p></div></div>
+        <div class="tl-item"><div class="dot"></div><div class="tl-content"><h4>2. Verify</h4><p>We verify each family's situation with home visits.</p></div></div>
+        <div class="tl-item"><div class="dot"></div><div class="tl-content"><h4>3. Support</h4><p>Fees, books, uniforms provided directly.</p></div></div>
+        <div class="tl-item"><div class="dot"></div><div class="tl-content"><h4>4. Follow-Up</h4><p>We track each child's progress regularly.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sponsor">
+    <div class="container">
+      <h2 class="section-title reveal">Sponsor A Child's Education</h2>
+      <p class="section-sub reveal">Choose how you want to make a difference.</p>
+      <div class="sponsor-grid">
+        <div class="sponsor-card reveal" onclick="sponsorNow(500)"><div class="icon">📖</div><h4>Books & Stationery</h4><div class="price">₹500</div><p>Full year's study material for one child.</p><button class="select-btn">Sponsor Now</button></div>
+        <div class="sponsor-card reveal" onclick="sponsorNow(1500)"><div class="icon">🎒</div><h4>School Kit</h4><div class="price">₹1,500</div><p>Bag, uniform, shoes, and stationery.</p><button class="select-btn">Sponsor Now</button></div>
+        <div class="sponsor-card reveal" onclick="sponsorNow(3000)"><div class="icon">📚</div><h4>Half-Year Tuition</h4><div class="price">₹3,000</div><p>Six months of free coaching support.</p><button class="select-btn">Sponsor Now</button></div>
+        <div class="sponsor-card reveal" onclick="sponsorNow(6000)"><div class="icon">🎓</div><h4>Full Year</h4><div class="price">₹6,000</div><p>Complete education for one whole year.</p><button class="select-btn">Sponsor Now</button></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ========== PAGE: FOOD ========== -->
+<div id="page-food" class="page">
+  <section class="page-hero food-hero">
+    <h1>🍛 Food Distribution Drive</h1>
+    <p>Every meal we serve is a life we touch. Every plate we share is a prayer we answer.</p>
+  </section>
+
+  <section class="quote-strip">
+    <p>"The best way to find yourself is to lose yourself in the service of others."</p>
+    <span>— Mahatma Gandhi</span>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title reveal">Our Food Distribution Impact</h2>
+      <p class="section-sub reveal">Real numbers. Real meals. Real smiles.</p>
+      <div class="stats-grid">
+        <div class="stat-box reveal"><span class="num" data-count="10000">0</span><span class="label">🍛 Meals Served</span></div>
+        <div class="stat-box reveal"><span class="num" data-count="500">0</span><span class="label">👨‍👩‍👧 Families Fed</span></div>
+        <div class="stat-box reveal"><span class="num" data-count="200">0</span><span class="label">📦 Ration Kits</span></div>
+        <div class="stat-box reveal"><span class="num" data-count="50">0</span><span class="label">❤️ Volunteers</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <div class="container-wide">
+      <h2 class="section-title reveal">📸 Moments That Matter</h2>
+      <p class="section-sub reveal">Click any photo to view it larger.</p>
+      <div class="gallery">
+        <div class="photo tall reveal"><img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=700&q=80" alt="Food" loading="lazy" /><div class="caption"><h4>Ration Kit Distribution</h4><p>Families receiving monthly ration</p></div></div>
+        <div class="photo reveal"><img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=700&q=80" alt="Meal" loading="lazy" /><div class="caption"><h4>Hot Meals Served</h4><p>Freshly cooked food for all</p></div></div>
+        <div class="photo reveal"><img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&w=700&q=80" alt="Volunteers" loading="lazy" /><div class="caption"><h4>Our Volunteers</h4><p>Hands that serve with love</p></div></div>
+        <div class="photo wide reveal"><img src="https://images.unsplash.com/photo-1595855759920-86582396756a?auto=format&fit=crop&w=900&q=80" alt="Community" loading="lazy" /><div class="caption"><h4>Community Kitchen</h4><p>Every meal cooked with care</p></div></div>
+        <div class="photo reveal"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80" alt="Plate" loading="lazy" /><div class="caption"><h4>A Plate Full of Hope</h4><p>Simple food, huge smiles</p></div></div>
+        <div class="photo tall reveal"><img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=700&q=80" alt="Children" loading="lazy" /><div class="caption"><h4>Feeding Little Ones</h4><p>Children are our priority</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="impact">
+    <div class="container">
+      <h2 class="section-title reveal">💭 Words That Inspire Us</h2>
+      <p class="section-sub reveal">These lines keep our volunteers going every single day.</p>
+      <div class="motivation-grid">
+        <div class="motivation-card reveal"><div class="q-icon">"</div><p>If you can't feed a hundred people, then feed just one.</p><div class="author">— Mother Teresa</div></div>
+        <div class="motivation-card reveal"><div class="q-icon">"</div><p>The simplest way to be happy is to do good for someone who can never repay you.</p><div class="author">— Anshika Foundation</div></div>
+        <div class="motivation-card reveal"><div class="q-icon">"</div><p>No one has ever become poor by giving.</p><div class="author">— Anne Frank</div></div>
+        <div class="motivation-card reveal"><div class="q-icon">"</div><p>A hungry stomach has no ears. Feed first, teach later.</p><div class="author">— Our Belief</div></div>
+        <div class="motivation-card reveal"><div class="q-icon">"</div><p>Service to man is service to God.</p><div class="author">— Ancient Wisdom</div></div>
+        <div class="motivation-card reveal"><div class="q-icon">"</div><p>We make a living by what we get, but we make a life by what we give.</p><div class="author">— Winston Churchill</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="help-cta">
+    <h2>Want To Help Feed The Poor?</h2>
+    <p>Even ₹100 can provide a full meal to a family. Your small act of kindness can fill an empty stomach today.</p>
+    <div class="help-buttons">
+      <a onclick="showPage('payment')" class="btn btn-primary">❤️ Donate Now</a>
+      <a onclick="showPage('volunteer')" class="btn btn-green">🤝 Volunteer</a>
+    </div>
+  </section>
+</div>
+
+<!-- ========== PAGE: HEALTH ========== -->
+<div id="page-health" class="page">
+  <section class="page-hero health-hero">
+    <h1>💊 Health Care Program</h1>
+    <p>Free medicines, health checkups, and medical support for the poor and elderly in Mira-Bhayandar.</p>
+    <div class="med-icons"><span>💊</span><span>🩺</span><span>🏥</span><span>❤️‍🩹</span><span>💉</span></div>
+  </section>
+
+  <section class="fun-stats">
+    <div class="fun-bubble"><div class="emoji">💊</div><div class="num" data-count="5000">0</div><div class="lbl">Medicines<br>Given</div></div>
+    <div class="fun-bubble"><div class="emoji">🩺</div><div class="num" data-count="800">0</div><div class="lbl">Health<br>Checkups</div></div>
+    <div class="fun-bubble"><div class="emoji">🏥</div><div class="num" data-count="25">0</div><div class="lbl">Medical<br>Camps</div></div>
+    <div class="fun-bubble"><div class="emoji">❤️</div><div class="num" data-count="1200">0</div><div class="lbl">Lives<br>Touched</div></div>
+  </section>
+
+  <section class="health-quote">
+    <p>"The greatest wealth is health. When we heal others, we heal ourselves."</p>
+    <span>— Our Mission</span>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title reveal">Our Health Services</h2>
+      <p class="section-sub reveal">Free medicines and medical support for those who cannot afford it.</p>
+      <div class="medicine-grid">
+        <div class="medicine-card reveal"><span class="med-icon">💊</span><h4>Free Medicines</h4><p>Essential medicines for poor families and elderly.</p></div>
+        <div class="medicine-card reveal"><span class="med-icon">🩺</span><h4>Health Checkups</h4><p>BP, sugar, and general health checkup camps.</p></div>
+        <div class="medicine-card reveal"><span class="med-icon">🏥</span><h4>Medical Camps</h4><p>Free doctor consultations every month.</p></div>
+        <div class="medicine-card reveal"><span class="med-icon">💉</span><h4>Vaccination Drive</h4><p>Free vaccination for children and elderly.</p></div>
+        <div class="medicine-card reveal"><span class="med-icon">❤️‍🩹</span><h4>First Aid Kits</h4><p>First aid kits for schools and families.</p></div>
+        <div class="medicine-card reveal"><span class="med-icon">🚑</span><h4>Emergency Help</h4><p>Emergency medical support for the needy.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <div class="container-wide">
+      <h2 class="section-title reveal">📸 Health Camp Moments</h2>
+      <p class="section-sub reveal">Real moments from our medical camps.</p>
+      <div class="gallery">
+        <div class="photo tall reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmgIbtlBRRo1z5WuI9ouBiOuvhJYtkRLWCcOErTFMbulxwhcVVvz_e-cFklpGtP94s5s0ba9gjPEhkc2sabuI1e8Z7JjgOzuiEceQDgKe5S_JB79eiuqvYeaOqMG9IWscG--dgKqy8mxk5i=w243-h406-n-k-no-nu" alt="Medicine" loading="lazy" /><div class="caption"><h4>Free Medicines</h4><p>Distributed to poor families</p></div></div>
+        <div class="photo reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnlV07DHzd1MUW-uA5x9i1g2bQq2hgWd3aS7MwEx3Ji7IS1seRtPjMDOoy-TKKwoBJ8OvyXbDZMwjlBidFNoMMkHlc3OjXyVirIfSDLjkMKi4IJLazAC7K2G60sJJd0SDaeySzg_1ueJoC7=w243-h244-n-k-no-nu" alt="Checkup" loading="lazy" /><div class="caption"><h4>Health Checkup</h4><p>BP and sugar tests</p></div></div>
+        <div class="photo reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmlxoTCiCDQMWq_xsDkJeKRZVk4OiSI9_cwUxEfWix2ynxu6AoA0HXnL7D-FFqiIXpGIoLxAGa863wjAidlKDCeD30JSabXc58CS0hn66fY7tWzoOUO53t7Bt9dKR3Fes7bvRUoWbfWVenb=w243-h244-n-k-no-nu" alt="Doctor" loading="lazy" /><div class="caption"><h4>Doctor Consultation</h4><p>Free expert advice</p></div></div>
+        <div class="photo wide reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWllLv1IE-qd8RYGv6cRj09IR9XiTW7TpcnH3wOYabgFvY_u4H6eMLZsnkx3ji5mGb3lwjyIZwJyJmeKiRYudmfiBYVgPVMzYZF8Lia_Xlj-bAHx8S833FTdym9jDoUGb0bSgvXQIIj02OJD=w243-h304-n-k-no-nu" alt="Camp" loading="lazy" /><div class="caption"><h4>Medical Camp</h4><p>Serving the community</p></div></div>
+        <div class="photo reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkTBovHrhN3GbpOHv4JmWR7IdB3t0IKSyhANeLE3k3BBswK3xn4FWuzlEZhFFgDGUo6lpBpYj3qNMEWriwVRgZF980q3Ort-3nnbUOz0RhTPOZ0zJWMx7HLz7qNF9xl_xE-x0SlgNts-Ats=w243-h174-n-k-no-nu" alt="Pills" loading="lazy" /><div class="caption"><h4>Essential Medicines</h4><p>Quality medicines for all</p></div></div>
+        <div class="photo tall reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnI2t7eqir2DH9a6h9kzqiQp_zPDq4awEuYUXHubx04APxbmG4vZPns7nIB64G_RjZOiuu-cEKrNPqsFuoJRTw_ImwR6R8nixugRKDEnHmgSJW7MfZydJ5oHQAdF8hVx7VHvWUHNiVF7_a3=w243-h406-n-k-no-nu" alt="Volunteer" loading="lazy" /><div class="caption"><h4>Caring Volunteers</h4><p>Hands that heal</p></div></div>
+        <div class="photo reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlxVE9wjyRtMydPbc2uZT545mxxAR6pPxFEOFieI1HrrD5P7XEmDAi7BEu_5QoQR6UHhrGR9BcFTrr5AfUeGpFkJ8wyBPvkcO3PqAfoL5JpzbqNEMPRhqLPMDbWLGWznmVVNlf8NycaDMmP=w243-h406-n-k-no-nu" alt="Stethoscope" loading="lazy" /><div class="caption"><h4>Health Screening</h4><p>Early detection saves lives</p></div></div>
+        <div class="photo reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmhIyE9KVPjAJpnw6XcWTh9o9Qw3MBRf2Qi6d83zoHqch1GngfHAYUTxn4BeXRmsX0qDYX2ePSar-pFtnx_FCBHjmf-rwrohgVH8srfRk47NX8P8LsOuFKYZmxfnQXbB6ox8-wnH9mrdXo=w243-h174-n-k-no-nu" alt="Pills" loading="lazy" /><div class="caption"><h4>Medicine Bank</h4><p>Always stocked</p></div></div>
+        <div class="photo wide reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkEkW-W-g14yzm-NEnDUi4SHhkyB1AlX6Xcp2m0pWNIXegc6s11rHfYHVZP38hJ2uq9JM3gcW_GAaRIOX5JUIcwJQ4JmYjNF1ZOjm-CCWsUntUtnoQw_OkJRhbB6yt4VQfOAFRdgG8ruP0=w243-h304-n-k-no-nu" alt="Camp" loading="lazy" /><div class="caption"><h4>Community Health Drive</h4><p>Together for better health</p></div></div>
+        <div class="photo reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnlpbMchGjA5dTu00K6oiGLall9Hlu2sbgYYE6BZFU0x3Bny37cO5nobjFcX9JGN38YwjETS1ArEnUHtLUf34r0ZekYX8f1hTKBkSn_s-biU1Uwm1_mNPhde3M3xRwFCOpI434HqA1j1jrt=w243-h406-n-k-no-nu" alt="Nurse" loading="lazy" /><div class="caption"><h4>Nursing Care</h4><p>Compassion in action</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="help-cta">
+    <h2>💚 Help Us Heal More Lives</h2>
+    <p>Even ₹200 can provide a month's medicine to an elderly person.</p>
+    <div class="help-buttons">
+      <a onclick="showPage('payment')" class="btn btn-primary">❤️ Donate Now</a>
+      <a onclick="showPage('volunteer')" class="btn btn-green">🤝 Volunteer</a>
+    </div>
+  </section>
+</div>
+
+
+<!-- ========== PAGE: ENVIRONMENT ========== -->
+<div id="page-environment" class="page">
+  <section class="page-hero env-hero">
+    <h1>🌱 Environment Support</h1>
+    <p>Planting trees, cleaning our streets, and protecting Mother Earth for the next generation.</p>
+    <div class="nature-icons"><span>🌱</span><span>🌳</span><span>🌍</span><span>♻️</span><span>💧</span></div>
+  </section>
+
+  <section class="eco-stats">
+    <div class="eco-bubble"><div class="emoji">🌳</div><div class="num" data-count="2500">0</div><div class="lbl">Trees<br>Planted</div></div>
+    <div class="eco-bubble"><div class="emoji">♻️</div><div class="num" data-count="150">0</div><div class="lbl">Clean-Up<br>Drives</div></div>
+    <div class="eco-bubble"><div class="emoji">🌱</div><div class="num" data-count="80">0</div><div class="lbl">Saplings<br>Distributed</div></div>
+    <div class="eco-bubble"><div class="emoji">💧</div><div class="num" data-count="5000">0</div><div class="lbl">Lives<br>Impacted</div></div>
+  </section>
+
+  <section class="eco-quote">
+    <p>"The Earth does not belong to us. We belong to the Earth. Plant a tree today — breathe tomorrow."</p>
+    <span>— Our Promise</span>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title reveal">Our Green Initiatives</h2>
+      <p class="section-sub reveal">Real actions that make our planet healthier.</p>
+      <div class="eco-grid">
+        <div class="eco-card reveal"><span class="eco-icon">🌳</span><h4>Tree Plantation</h4><p>Planting hundreds of saplings every year in schools and communities.</p></div>
+        <div class="eco-card reveal"><span class="eco-icon">♻️</span><h4>Clean-Up Drives</h4><p>Regular cleaning drives in streets, beaches, and neighborhoods.</p></div>
+        <div class="eco-card reveal"><span class="eco-icon">🌱</span><h4>Sapling Distribution</h4><p>Free saplings distributed to families for home gardening.</p></div>
+        <div class="eco-card reveal"><span class="eco-icon">💧</span><h4>Water Conservation</h4><p>Awareness on saving water and rainwater harvesting.</p></div>
+        <div class="eco-card reveal"><span class="eco-icon">🐦</span><h4>Bird Feeders</h4><p>Water pots and bird feeders during hot summers.</p></div>
+        <div class="eco-card reveal"><span class="eco-icon">🌍</span><h4>Awareness Programs</h4><p>Teaching recycling, plastic-free living, and eco habits.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <div class="container-wide">
+      <h2 class="section-title reveal">📸 Green Moments</h2>
+      <p class="section-sub reveal">Real photos from our tree plantation and clean-up drives.</p>
+      <div class="gallery">
+      <div class="photo tall reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm1sksxzD45Mro3Gu1qhwKICsinieDWpTZjOLVbMW3iPNSWSH-ugcpYtMOZee7E1JgWqpXEq6cFbv3iuwJ03UXSTu8cJq6r2lMdqsE8GFlDtxo9IBBvgvUBrs8lQlrpy_oXUH58szWPXTY=s680-w680-h510-rw" alt="Tree" loading="lazy" /><div class="caption"><h4>Tree Plantation</h4><p>Planting for the future</p></div></div>
+        <div class="photo reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlNEbBakuj2G6zCwIRDkbJWlrtVyGENuzFxb6jyc-aBYtFtSaDdNt4yrJcyPrOBTxY2a2jzG93XrvwKwesZkUf0N4CAkw6xI6uCMIC2t_MtTcPBpSH4-8nyRhREQG65aoq6mBo1QhmX-LmW=s680-w680-h510-rw" alt="Sapling" loading="lazy" /><div class="caption"><h4>Tiny Saplings</h4><p>Little steps, big change</p></div></div>
+        <div class="photo reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmetDiblnX-eIcoPEwGUzY-XOaYaE-j5YqAycfy3nrG0_4NgwZg-MmaF_1djrIXlaEoAjx0ovAtU1T0OVnMeQc_HZw9bWIO8H38dcOT8nuT9HbmHynADudje3EPMDVs2TAb38ytsfdyUi4=s680-w680-h510-rw" alt="Volunteers" loading="lazy" /><div class="caption"><h4>Green Volunteers</h4><p>Hands that plant hope</p></div></div>
+        <div class="photo wide reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm3xGxipZYbtpcAmYVpoX1c1X1lEhjooAGjNdali5En-eMWZuJgopVJD_8unQoEPF5hiacfK_vEaLAuif0zmY2R5i55hWmFl-BHRivr5tcD5QVVj-osOrT9mf1yPyVCZIWgVe7v2I9V0nA6=s680-w680-h510-rw" alt="Forest" loading="lazy" /><div class="caption"><h4>Our Green Future</h4><p>Lush and alive</p></div></div>
+        <div class="photo reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkgld4A0crEkMG54ZXcl0P1YeBb7UBrg5sqA7iBWGN8zpsELhNtGXb4u5R4WChfrakrP1iH9SZ4qSj_ys_nlQeDgrrGAfywjzz5xJYPBsZMM5y8fgPjetEs3EwRloIyemppNZ13Wx5NU64e=s680-w680-h510-rw" alt="Water" loading="lazy" /><div class="caption"><h4>Save Water</h4><p>Every drop counts</p></div></div>
+        <div class="photo tall reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl0iMvptiVij4pc5STlovauknYiU8plY7XJLqfB4Y2ZZYZsYw1FxajHNdGPqnUtukD8-kGQDdyucmwHeEggeZNIfP9mJBo3wkbReWASAu0hxBT0Toj_mqyCJEGpO-Bgw5sv9c14Cs4WDI5x=s680-w680-h510-rw" alt="Gardening" loading="lazy" /><div class="caption"><h4>Community Garden</h4><p>Growing together</p></div></div>
+        <div class="photo reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnq_LOCZ4Gb83Kxtv5h1UlbPf6jLjT_CaYjGVzAXhEZBmaZ0N43s01i8vZnIYhDQYkpsO7DiwRVhTWMFkz-JwmkwJH0SlUIQbHHET8OvPzRPxHSnpNcpiqrvyLEEKJ0qHzUqbdXZyP5YoKv=s680-w680-h510-rw" alt="Recycle" loading="lazy" /><div class="caption"><h4>Recycling Drive</h4><p>Reduce, reuse, recycle</p></div></div>
+        <div class="photo reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmU3t_IxTxB_SHedWrbDCxsMpGvjYd3YAAsonvY5UdgLjlVMa9ClmsDMzDXRiL2UNNwAY-PZsf-HFC0gThRrLc5ZNOtMyXDtbYPPOOMIMczDbxAcwrqJyXKLoHMGfRwbXIGbNeH-aHvMsw=s680-w680-h510-rw" alt="Beach" loading="lazy" /><div class="caption"><h4>Clean-Up Drive</h4><p>Beach cleaning initiative</p></div></div>
+        <div class="photo reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkI_e5vUqGzD_l3x2bPzpsvblhy5AS1M-UKQay2feCCfci95sDQ62pd8GT7L5rxnRWzpe3bDJUhNZ5k5UGxHmSSR0pEj_1LLT7M5Dcc6MAtFolI39FKu-3jf8fR5hk9NKbY5rFSoosON-Sn=s680-w680-h510-rw" alt="Nature" loading="lazy" /><div class="caption"><h4>Nature is Life</h4><p>Protect what we love</p></div></div>
+        <div class="photo wide reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn7bLQKuvb0qpgUqjaxQoux7rmkJZYRs4FMo4TjR2ZRDBhq79mb-4pRWOduwyTzerH5WonTZg5f45IwGTXIthgaD3kK7_-UhToIMRkR6FglDWWNAtZ-70CQ-2YdI5XYGPteLFT2eaXkKCup=s680-w680-h510-rw" alt="Leaves" loading="lazy" /><div class="caption"><h4>Green Cover</h4><p>Restoring greenery</p></div></div>
+        <div class="photo reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnA7k5TA71dVeTW1smpX1mz2FFSfIxWcXlyAosApDchJhdJ6SBpiYfLXzK8BGm_gzOgzJo5e3xI_g_OaxnhGZozMSeDh8b9-kFbVNKew8z_JnwjW5rjRFgAVN7vcyOuPFWswaGARcFA9as-=s680-w680-h510-rw" alt="Earth" loading="lazy" /><div class="caption"><h4>One Earth</h4><p>Our only home</p></div></div>
+        <div class="photo reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl_KaB-QETULAyDpdtu0VDcpTJYI7EpPlLbWWvyX8k3ByKZwM9Tk2RAmClSYRaVDsd6moRMwIgv9awIC90kullDbHKTimIKXDu2_46F4UBmOsfZuV2AMkoWxACDgkE1jWBXvugm9aVMric=s680-w680-h510-rw" alt="Sunlight" loading="lazy" /><div class="caption"><h4>Natural Light</h4><p>Clean energy for all</p></div></div>  
+      </div>
+    </div>
+  </section>
+
+   <section class="impact">
+    <div class="container">
+      <h2 class="section-title reveal">💚 Words For Our Planet</h2>
+      <p class="section-sub reveal">Inspiring thoughts that drive our environmental mission.</p>
+      <div class="motivation-grid">
+        <div class="motivation-card reveal" style="border-left-color:#22c55e;"><div class="q-icon" style="color:#22c55e;">"</div><p>The best time to plant a tree was 20 years ago. The second best time is now.</p><div class="author" style="color:#16a34a;">— Chinese Proverb</div></div>
+        <div class="motivation-card reveal" style="border-left-color:#22c55e;"><div class="q-icon" style="color:#22c55e;">"</div><p>We do not inherit the Earth from our ancestors; we borrow it from our children.</p><div class="author" style="color:#16a34a;">— Native American Proverb</div></div>
+        <div class="motivation-card reveal" style="border-left-color:#22c55e;"><div class="q-icon" style="color:#22c55e;">"</div><p>The Earth has enough for everyone's need, but not for everyone's greed.</p><div class="author" style="color:#16a34a;">— Mahatma Gandhi</div></div>
+        <div class="motivation-card reveal" style="border-left-color:#22c55e;"><div class="q-icon" style="color:#22c55e;">"</div><p>What we are doing to the forests is a mirror reflection of what we are doing to ourselves.</p><div class="author" style="color:#16a34a;">— Mahatma Gandhi</div></div>
+        <div class="motivation-card reveal" style="border-left-color:#22c55e;"><div class="q-icon" style="color:#22c55e;">"</div><p>Plant trees. They give you oxygen, shade, fruits, and hope.</p><div class="author" style="color:#16a34a;">— Anshika Foundation</div></div>
+        <div class="motivation-card reveal" style="border-left-color:#22c55e;"><div class="q-icon" style="color:#22c55e;">"</div><p>Small acts, when multiplied by millions of people, can transform the world.</p><div class="author" style="color:#16a34a;">— Howard Zinn</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="help-cta" style="background:linear-gradient(135deg,#16a34a,#065f46);">
+    <h2>🌱 Plant A Tree Today</h2>
+    <p>Just ₹300 can plant a tree that will live for 50+ years, giving oxygen and life to countless beings.</p>
+    <div class="help-buttons">
+      <a onclick="showPage('payment')" class="btn" style="background:#fff;color:#16a34a;">❤️ Donate ₹300</a>
+      <a onclick="showPage('volunteer')" class="btn btn-outline">🤝 Join Us</a>
+    </div>
+  </section>
+</div>
+
+
+<!-- ========== PAGE: VOLUNTEER ========== -->
+<div id="page-volunteer" class="page">
+  <section class="vol-hero">
+    <h1>🤝 Become A Volunteer</h1>
+    <p>Join our family of changemakers. Give your time, skills, and heart to make Mira-Bhayandar a better place.</p>
+    <div class="vol-icons"><span>🙋</span><span>💪</span><span>❤️</span><span>🌟</span></div>
+  </section>
+
+  <section class="why-vol">
+    <div class="container">
+      <h2 class="section-title reveal">Why Volunteer With Us?</h2>
+      <p class="section-sub reveal">There are so many reasons to join our mission.</p>
+      <div class="why-grid">
+        <div class="why-card reveal"><span class="why-icon">💖</span><h4>Make A Difference</h4><p>Your time directly impacts the lives of poor children and families.</p></div>
+        <div class="why-card reveal"><span class="why-icon">🎓</span><h4>Learn New Skills</h4><p>Gain experience in event management, teaching, and social work.</p></div>
+        <div class="why-card reveal"><span class="why-icon">👥</span><h4>Meet Great People</h4><p>Join a community of like-minded, kind-hearted individuals.</p></div>
+        <div class="why-card reveal"><span class="why-icon">📜</span><h4>Get Certificate</h4><p>Receive a volunteer certificate after your service completion.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="volunteer-form-section">
+    <div class="container">
+      <div class="vol-form-card">
+        <div id="volFormWrap">
+          <h2>📝 Volunteer Registration</h2>
+          <p class="sub">Fill this form and we'll contact you within 24 hours.</p>
+          <form action="https://formsubmit.co/miraculousfav0@gmail.com" method="POST" id="volunteerForm">
+            <div class="form-row">
+              <div class="form-group"><label>Full Name <span class="req">*</span></label><input type="text" id="volName" required placeholder="Your full name" /></div>
+              <div class="form-group"><label>Age <span class="req">*</span></label><input type="number" id="volAge" required min="15" max="100" placeholder="Your age" /></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label>Mobile Number <span class="req">*</span></label><input type="tel" id="volPhone" required pattern="[0-9]{10}" placeholder="10-digit mobile" /></div>
+              <div class="form-group"><label>Email <span class="req">*</span></label><input type="email" id="volEmail" required placeholder="your@email.com" /></div>
+            </div>
+            <div class="form-group"><label>City / Area <span class="req">*</span></label><input type="text" id="volCity" required placeholder="e.g. Bhayandar East" /></div>
+            <div class="form-group">
+              <label>Which area interests you? (Select multiple) <span class="req">*</span></label>
+              <div class="interest-grid">
+                <label class="interest-option" onclick="toggleInterest(this)"><input type="checkbox" value="Education" /> 📚 Education</label>
+                <label class="interest-option" onclick="toggleInterest(this)"><input type="checkbox" value="Food Distribution" /> 🍛 Food</label>
+                <label class="interest-option" onclick="toggleInterest(this)"><input type="checkbox" value="Health Care" /> 💊 Health</label>
+                <label class="interest-option" onclick="toggleInterest(this)"><input type="checkbox" value="Environment" /> 🌱 Environment</label>
+                <label class="interest-option" onclick="toggleInterest(this)"><input type="checkbox" value="Fundraising" /> 💰 Fundraising</label>
+                <label class="interest-option" onclick="toggleInterest(this)"><input type="checkbox" value="Social Media" /> 📱 Social Media</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Availability <span class="req">*</span></label>
+              <select id="volAvailability" required>
+                <option value="">-- Select --</option>
+                <option value="Weekdays">Weekdays</option>
+                <option value="Weekends">Weekends</option>
+                <option value="Evenings">Evenings</option>
+                <option value="Flexible">Flexible</option>
+              </select>
+            </div>
+            <div class="form-group"><label>Why do you want to volunteer? (Optional)</label><textarea id="volMessage" placeholder="Tell us in a few words..."></textarea></div>
+            <button type="submit" class="vol-submit">🎉 Register As Volunteer</button>
+          </form>
+        </div>
+        <div class="vol-success" id="volSuccess">
+          <div class="success-icon">✓</div>
+          <h2>Welcome To The Family! 🎉</h2>
+          <p>Aapka registration successful ho gaya! Hamari team aapse jald contact karegi.</p>
+          <div class="vol-id-box">
+            <div class="lbl">Your Volunteer ID</div>
+            <div class="id" id="volIdDisplay">VOL-0000</div>
+          </div>
+          <div class="info-text">
+            📞 Hum aapko 24 ghante mein call karenge<br>
+            📧 Aapke email pe details bhejenge<br>
+            📱 WhatsApp pe group add karenge
+          </div>
+          <div class="vol-buttons">
+            <button class="btn-print" onclick="printVolunteerID()">📥 Download ID</button>
+            <button class="btn-another" onclick="resetVolunteerForm()">➕ Register Another</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="help-cta">
+    <h2>Prefer To Donate Instead?</h2>
+    <p>If you can't volunteer right now, your donation can still make a huge difference.</p>
+    <div class="help-buttons">
+      <a onclick="showPage('payment')" class="btn btn-primary">❤️ Donate Now</a>
+      <a class="btn btn-outline" onclick="showPage('home','contact')">📞 Call Us</a>
+    </div>
+  </section>
+</div>
+
+<!-- ========== PAGE: PAYMENT ========== -->
+<div id="page-payment" class="page">
+  <div class="pay-wrapper">
+    <div class="pay-card">
+      <div class="pay-header">
+        <h2>❤️ Make a Donation</h2>
+        <p>Your contribution supports poor children, families, and our environment.</p>
+      </div>
+      <div class="pay-body">
+
+        <div class="donor-section">
+          <h3>📝 Donor Details (for 80G Receipt)</h3>
+          <div class="donor-grid">
+            <div class="donor-field"><label>Full Name <span class="req">*</span></label><input type="text" id="donorName" placeholder="Your full name" /></div>
+            <div class="donor-field"><label>Mobile Number <span class="req">*</span></label><input type="tel" id="donorPhone" placeholder="10-digit mobile" maxlength="10" /></div>
+            <div class="donor-field"><label>Email <span class="req">*</span></label><input type="email" id="donorEmail" placeholder="your@email.com" /></div>
+            <div class="donor-field"><label>PAN Number (for 80G)</label><input type="text" id="donorPan" placeholder="ABCDE1234F" maxlength="10" style="text-transform:uppercase;" /></div>
+            <div class="donor-field full"><label>Address</label><textarea id="donorAddress" placeholder="Your full address" rows="2" style="resize:vertical;min-height:60px;"></textarea></div>
+          </div>
+        </div>
+
+        <div class="amount-label">💝 Select Amount</div>
+        <div class="pay-amount-grid" id="payAmountGrid">
+          <button class="pay-amount-btn" data-amount="500">₹500</button>
+          <button class="pay-amount-btn active" data-amount="1000">₹1,000</button>
+          <button class="pay-amount-btn" data-amount="2500">₹2,500</button>
+          <button class="pay-amount-btn" data-amount="5000">₹5,000</button>
+          <button class="pay-amount-btn" data-amount="11000">₹11,000</button>
+          <button class="pay-amount-btn" data-amount="21000">₹21,000</button>
+        </div>
+
+        <div class="pay-custom">
+          <label>Or enter custom amount:</label>
+          <input type="number" id="payCustomAmount" placeholder="Enter amount ₹" min="1" />
+        </div>
+
+        <div class="pay-impact" id="payImpact">
+          <span class="emoji" id="payImpactEmoji">📚</span>
+          <span class="text" id="payImpactText">Your <b>₹1,000</b> can provide school books for <b>2 children</b>!</span>
+        </div>
+
+        <button class="pay-btn-main" onclick="scrollToQR()">📱 Pay via UPI QR Code</button>
+
+        <div class="pay-divider">Scan QR Code</div>
+
+        <div class="qr-section" id="qrSection">
+          <h3>📱 Scan & Pay Instantly</h3>
+          <p class="qr-desc">Google Pay, PhonePe, Paytm, BHIM — any UPI app</p>
+          <div class="qr-box"><img id="qrImage" src="" alt="UPI QR" /></div>
+          <div class="upi-row">
+            <span class="lbl">UPI ID</span>
+            <span class="val" id="upiIdDisplay">-</span>
+            <button class="cpy" onclick="copyUPI()">Copy</button>
+          </div>
+          <p style="color:#888;font-size:.8rem;margin-top:8px;">You can pay via UPI using the above ID or QR code. Thank you!</p>
+        </div>
+
+        <div class="bank-section">
+          <h3>🏦 Bank Transfer Details</h3>
+          <div class="bank-grid">
+            <div class="bank-item"><div class="bank-label">Account Name</div><div class="bank-value">Anshika Helping Hands Foundation</div></div>
+            <div class="bank-item"><div class="bank-label">Account Number</div><div class="bank-value">1234567890</div><button class="bank-copy" onclick="copyText('1234567890', 'Account Number')">📋 Copy</button></div>
+            <div class="bank-item"><div class="bank-label">IFSC Code</div><div class="bank-value">SBIN0001234</div><button class="bank-copy" onclick="copyText('SBIN0001234', 'IFSC Code')">📋 Copy</button></div>
+            <div class="bank-item"><div class="bank-label">Bank Name</div><div class="bank-value">State Bank of India</div></div>
+            <div class="bank-item"><div class="bank-label">Branch</div><div class="bank-value">Bhayandar East</div></div>
+            <div class="bank-item"><div class="bank-label">Account Type</div><div class="bank-value">Savings</div></div>
+          </div>
+        </div>
+
+        <div class="trust-badges">
+          <div class="trust-item"><div class="trust-icon">✓</div><span>100% Secure</span></div>
+          <div class="trust-item"><div class="trust-icon">🎁</div><span>80G Receipt</span></div>
+          <div class="trust-item"><div class="trust-icon">⚡</div><span>Instant</span></div>
+          <div class="trust-item"><div class="trust-icon">💚</div><span>Transparent</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== FOOTER (NGOPRESS STYLE) ========== -->
+<footer class="ngo-footer">
+  <div class="ngo-footer-container">
+
+    <!-- TOP SECTION: 4 COLUMNS -->
+    <div class="ngo-footer-top">
+
+      <!-- COLUMN 1: Logo + Address + Contact -->
+      <div class="ngo-col ngo-col-brand">
+        <div class="ngo-footer-logo">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkj_XotcbrSHpfwhKok1M6ViVQrRRgrUwYzHjlFlHWXIm0JwQWD32dOIR6ICkSzfXflTnR_2c8Bm08CzE2hDhM37aH5IrJ9hjnnyrpX9_UydmrxGp-3LrM_BeaocKSuOUrtjEqqv_1JQeIT=w165-h165-n-k-no-nu" alt="Logo">
+          <div class="ngo-brand-text">
+            <span class="ngo-brand-main">Anshika Helping Hands</span>
+            <span class="ngo-brand-sub">Foundation</span>
+          </div>
+        </div>
+
+        <p class="ngo-address">
+          Shop No.2, New Sagar Samrat CHS Ltd,<br>
+          Cabin Cross Rd, Hema Kunj, Narmada Nagar,<br>
+          Bhayandar East, Mira Bhayandar,<br>
+          Maharashtra 401105
+        </p>
+
+        <div class="ngo-contact-list">
+          <div class="ngo-contact-item">
+            <span class="ngo-icon">📞</span>
+            <a href="tel:09920446089">+91 99204 46089</a>
+          </div>
+          <div class="ngo-contact-item">
+            <span class="ngo-icon">📧</span>
+            <a href="mailto:miraculousfav0@gmail.com">miraculousfav0@gmail.com</a>
+          </div>
+          <div class="ngo-contact-item">
+            <span class="ngo-icon">🌐</span>
+            <a href="#">www.anshikahelpinghands.org</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLUMN 2: Useful Links -->
+      <div class="ngo-col">
+        <h4 class="ngo-col-title">Useful Links</h4>
+        <ul class="ngo-links">
+          <li><a onclick="showPage('home')"><span class="ngo-arrow">›</span> Home</a></li>
+          <li><a onclick="showPage('education')"><span class="ngo-arrow">›</span> Education</a></li>
+          <li><a onclick="showPage('food')"><span class="ngo-arrow">›</span> Food Distribution</a></li>
+          <li><a onclick="showPage('health')"><span class="ngo-arrow">›</span> Health Care</a></li>
+          <li><a onclick="showPage('environment')"><span class="ngo-arrow">›</span> Environment</a></li>
+          <li><a onclick="showPage('volunteer')"><span class="ngo-arrow">›</span> Volunteer</a></li>
+          <li><a onclick="showPage('payment')"><span class="ngo-arrow">›</span> Donate</a></li>
+        </ul>
+      </div>
+
+      <!-- COLUMN 3: Twitter Feed -->
+      <div class="ngo-col">
+        <h4 class="ngo-col-title">Twitter Feed</h4>
+        <div class="ngo-twitter-feed">
+          <div class="ngo-tweet">
+            <span class="ngo-tweet-icon">🐦</span>
+            <p>Every child deserves a chance to learn. Join us in our mission to educate underprivileged kids. <a href="#">#Education</a> <a href="#">#NGO</a></p>
+            <span class="ngo-tweet-time">2 hours ago</span>
+          </div>
+          <div class="ngo-tweet">
+            <span class="ngo-tweet-icon">🐦</span>
+            <p>Our food distribution drive served 500+ families this month. Thank you to all volunteers! <a href="#">#FoodForAll</a></p>
+            <span class="ngo-tweet-time">1 day ago</span>
+          </div>
+          <div class="ngo-tweet">
+            <span class="ngo-tweet-icon">🐦</span>
+            <p>Plant a tree today — breathe tomorrow 🌱 Join our green mission! <a href="#">#Environment</a></p>
+            <span class="ngo-tweet-time">3 days ago</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLUMN 4: Opening Hours -->
+      <div class="ngo-col">
+        <h4 class="ngo-col-title">Opening Hours</h4>
+        <div class="ngo-hours">
+          <div class="ngo-hours-row">
+            <span class="ngo-hours-day">Mon - Tues :</span>
+            <span class="ngo-hours-time">6.00 am - 10.00 pm</span>
+          </div>
+          <div class="ngo-hours-row">
+            <span class="ngo-hours-day">Wednes - Thurs :</span>
+            <span class="ngo-hours-time">8.00 am - 6.00 pm</span>
+          </div>
+          <div class="ngo-hours-row">
+            <span class="ngo-hours-day">Fri :</span>
+            <span class="ngo-hours-time">3.00 pm - 8.00 pm</span>
+          </div>
+          <div class="ngo-hours-row ngo-hours-closed">
+            <span class="ngo-hours-day">Sun :</span>
+            <span class="ngo-hours-time">Closed</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM SECTION: Subscribe + Call + Social -->
+    <div class="ngo-footer-bottom">
+
+      <!-- Subscribe Us -->
+      <div class="ngo-bottom-col">
+        <h4 class="ngo-col-title">Subscribe Us</h4>
+        <form class="ngo-subscribe-form" onsubmit="subscribeEmail(event)">
+          <input type="email" id="subscribeEmail" placeholder="Your Email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <!-- Call Us Now -->
+      <div class="ngo-bottom-col">
+        <h4 class="ngo-col-title">Call Us Now</h4>
+        <div class="ngo-call-list">
+          <a href="tel:09920446089" class="ngo-call-item">
+            <span>📞</span> +91 99204 46089
+          </a>
+          <a href="tel:09920446089" class="ngo-call-item">
+            <span>📞</span> +91 99204 46089
+          </a>
+        </div>
+      </div>
+
+      <!-- Connect With Us -->
+      <div class="ngo-bottom-col">
+        <h4 class="ngo-col-title">Connect With Us</h4>
+        <div class="ngo-socials">
+          <a href="https://www.facebook.com/" target="_blank" class="ngo-social facebook" title="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com/" target="_blank" class="ngo-social twitter" title="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://wa.me/919920446089" target="_blank" class="ngo-social whatsapp" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://youtube.com/" target="_blank" class="ngo-social youtube" title="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://instagram.com/" target="_blank" class="ngo-social instagram" title="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.google.com/maps?q=Anshika+Helping+Hands+Foundation+Bhayandar+East" target="_blank" class="ngo-social maps" title="Google Maps">
+            <i class="fas fa-map-marker-alt"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="ngo-copyright">
+      © <span id="year"></span> <b>Anshika Helping Hands Foundation</b> · All Rights Reserved · Made with ❤️ for the community
+    </div>
+
+  </div>
+</footer>
+
+<!-- SUCCESS MODAL -->
+<div class="success-modal" id="successModal">
+  <div class="success-content">
+    <div class="s-icon">✓</div>
+    <h2>🙏 Thank You!</h2>
+    <p class="msg">Aapne payment kar diya hai!<br>Hamari team aapko jald confirmation bhejegi.</p>
+    <div class="details">
+      <div class="det-row"><span class="lbl">Amount:</span><span class="val amt" id="successAmount">₹0</span></div>
+      <div class="det-row"><span class="lbl">Donor:</span><span class="val" id="successDonor">-</span></div>
+      <div class="det-row"><span class="lbl">Status:</span><span class="val ok">✓ Success</span></div>
+    </div>
+    <div class="note">📧 Confirmation message aur 80G receipt jald bhej diya jayega. Call: <b>099204 46089</b></div>
+    <button class="close-btn" onclick="closeSuccess()">Close</button>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="close" onclick="closeLightbox(event)">×</button>
+  <img src="" alt="Enlarged" id="lightboxImg" onclick="event.stopPropagation()" />
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
